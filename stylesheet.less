@@ -1,5 +1,5 @@
-@col1: #105668;
-@col2: #e48675;
+@col1: #6980a7;
+@col2: #e5dad5;
 @titlefont: 'Lancelot', cursive;
 @bodyfont: 'Quicksand', sans-serif;
 
@@ -7,6 +7,10 @@
 body{
     margin: 0;
     font-family: @bodyfont;
+    scroll-behavior: smooth;
+}
+section{
+    padding: 100px 0;
 }
 h1{
     margin: 0;
@@ -38,6 +42,7 @@ h1{
     background-image: url("background-image.jpg");
     background-size: cover;
     color: #fff;
+    padding: 0;
     .header-content{
         padding: 300px 0 200px;
         h1{
@@ -62,8 +67,41 @@ h1{
     }
 }
 
+#about{
+    height: 500px; // !!!!!!
+    .about{
+        &__left{
+            float: left;
+            margin: 50px 150px 50px 0;
+            .profile-image{
+                width: 300px;
+            }
+            
+        }
+        &__right{
+            margin-left: 100px;
+        }
+    }
+}
 
 
-.profile-image{
-    width: 30px;
+
+
+#contact-bar{
+    background-color: @col2;
+    .contact-item{
+        background-color: #fff;
+        display: inline-block;
+        margin: 50px;
+        &__content{
+            text-align: center;
+            height: 100px;
+            width: 100px;
+        }
+    }
+}
+
+
+#work{
+    background-color: @col1;
 }

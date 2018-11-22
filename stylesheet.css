@@ -1,6 +1,10 @@
 body {
   margin: 0;
   font-family: 'Quicksand', sans-serif;
+  scroll-behavior: smooth;
+}
+section {
+  padding: 100px 0;
 }
 h1 {
   margin: 0;
@@ -14,7 +18,7 @@ h1 {
   margin: auto;
 }
 #nav {
-  background-color: #105668;
+  background-color: #6980a7;
   font-size: 20px;
   padding: 10px;
   position: sticky;
@@ -29,6 +33,7 @@ h1 {
   background-image: url("background-image.jpg");
   background-size: cover;
   color: #fff;
+  padding: 0;
 }
 #header .header-content {
   padding: 300px 0 200px;
@@ -51,6 +56,32 @@ h1 {
   background-position: center;
   background-size: 40px;
 }
-.profile-image {
-  width: 30px;
+#about {
+  height: 500px;
+}
+#about .about__left {
+  float: left;
+  margin: 50px 150px 50px 0;
+}
+#about .about__left .profile-image {
+  width: 300px;
+}
+#about .about__right {
+  margin-left: 100px;
+}
+#contact-bar {
+  background-color: #e5dad5;
+}
+#contact-bar .contact-item {
+  background-color: #fff;
+  display: inline-block;
+  margin: 50px;
+}
+#contact-bar .contact-item__content {
+  text-align: center;
+  height: 100px;
+  width: 100px;
+}
+#work {
+  background-color: #6980a7;
 }
