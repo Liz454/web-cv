@@ -25,15 +25,30 @@ h1{
     margin: auto;
 }
 
+
+
 #nav{
     background-color: @col1;
     font-size: 20px;
     padding: 10px;
     position: sticky;
     top: 0;
-    .link{
-        color: #fff;
-        margin-right: 50px;
+        .link{
+            color: #fff;
+            margin: 0 3%;
+        }
+}
+@media screen and (max-width: 768px){
+    #nav .link{
+        width: 5%;
+        font-size: 16px;
+        margin: 0 3%;
+    }
+}
+@media screen and (max-width: 480px){
+    #nav .link{
+        font-size: 14px;
+        margin: 0 3px;
     }
 }
 
@@ -44,7 +59,7 @@ h1{
     color: #fff;
     padding: 0;
     .header-content{
-        padding: 300px 0 200px;
+        padding: 50% 0 20%;
         h1{
             font-size: 60px;
             font-family: @titlefont;
@@ -57,7 +72,6 @@ h1{
         margin: 50px 0;
         width: 40px;
         height: 40px;
-
         background: none;
         border:none;
         background-image: url("images/chevron-down.svg");
@@ -66,9 +80,19 @@ h1{
         background-size: 40px;
     }
 }
+@media screen and (min-width: 375px) and (max-width: 767px){
+    #header .header-content{
+        padding: 70% 0 20%;
+    }
+}
+@media screen and (min-width: 990px){
+    #header .header-content{
+        padding: 30% 0 20%;
+    }
+}
 
 #about{
-    height: 500px; // !!!!!!
+    //height: 500px; // !!!!!!
     .about{
         &__left{
             float: left;
