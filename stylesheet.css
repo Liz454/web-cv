@@ -30,7 +30,7 @@ h1 {
 }
 #header {
   text-align: center;
-  background-image: url("background-image.jpg");
+  background-image: url("images/background-image.jpg");
   background-size: cover;
   color: #fff;
   padding: 0;
@@ -51,7 +51,7 @@ h1 {
   height: 40px;
   background: none;
   border: none;
-  background-image: url("chevron-down.svg");
+  background-image: url("images/chevron-down.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 40px;
@@ -70,17 +70,88 @@ h1 {
   margin-left: 100px;
 }
 #contact-bar {
+  padding: 30px 0;
   background-color: #e5dad5;
+  font-size: 20px;
+  font-weight: bold;
 }
-#contact-bar .contact-item {
-  background-color: #fff;
+#contact-bar .contact-item__container {
+  width: 950px;
+  margin: auto;
+}
+#contact-bar .contact-item__container .contact-item {
   display: inline-block;
-  margin: 50px;
+  margin: 0 40px;
 }
-#contact-bar .contact-item__content {
+#contact-bar .contact-item__container .contact-item__content {
   text-align: center;
-  height: 100px;
-  width: 100px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100px;
+}
+#contact-bar .contact-item__container .contact-item__content__link {
+  display: block;
+  width: 150px;
+  padding: 110px 0 0;
+}
+#contact-bar .contact-item__container .contact-item__content--cv {
+  background-image: url("images/social-icons/document-white.svg");
+}
+#contact-bar .contact-item__container .contact-item__content--cv:hover {
+  background-image: url("images/social-icons/document-color.svg");
+}
+#contact-bar .contact-item__container .contact-item__content--github {
+  background-image: url("images/social-icons/github-white.svg");
+}
+#contact-bar .contact-item__container .contact-item__content--github:hover {
+  background-image: url("images/social-icons/github-color.svg");
+}
+#contact-bar .contact-item__container .contact-item__content--codepen {
+  background-image: url("images/social-icons/codepen-white.svg");
+}
+#contact-bar .contact-item__container .contact-item__content--codepen:hover {
+  background-image: url("images/social-icons/codepen-color.svg");
+}
+#contact-bar .contact-item__container .contact-item__content--linkedin {
+  background-image: url("images/social-icons/linkedin-white.svg");
+}
+#contact-bar .contact-item__container .contact-item__content--linkedin:hover {
+  background-image: url("images/social-icons/linkedin-color.svg");
+}
+@media screen and (max-width: 991px) {
+  #contact-bar .contact-item__container {
+    width: 770px;
+  }
+  #contact-bar .contact-item__container .contact-item {
+    margin: 0 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #contact-bar .contact-item__container {
+    width: 430px;
+  }
+  #contact-bar .contact-item__container .contact-item {
+    margin: 30px 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #contact-bar .contact-item__container {
+    width: 320px;
+  }
+  #contact-bar .contact-item__container .contact-item__content {
+    background-size: 80px;
+  }
+  #contact-bar .contact-item__container .contact-item__content__link {
+    width: 97px;
+  }
+}
+@media screen and (max-width: 374px) {
+  #contact-bar .contact-item__container {
+    width: 286px;
+  }
+  #contact-bar .contact-item__container .contact-item__content__link {
+    width: 80px;
+  }
 }
 #work {
   background-color: #6980a7;

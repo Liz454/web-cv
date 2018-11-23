@@ -39,7 +39,7 @@ h1{
 
 #header{
     text-align: center;
-    background-image: url("background-image.jpg");
+    background-image: url("images/background-image.jpg");
     background-size: cover;
     color: #fff;
     padding: 0;
@@ -60,7 +60,7 @@ h1{
 
         background: none;
         border:none;
-        background-image: url("chevron-down.svg");
+        background-image: url("images/chevron-down.svg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: 40px;
@@ -88,15 +88,97 @@ h1{
 
 
 #contact-bar{
+    padding: 30px 0;
     background-color: @col2;
-    .contact-item{
-        background-color: #fff;
-        display: inline-block;
-        margin: 50px;
-        &__content{
-            text-align: center;
-            height: 100px;
-            width: 100px;
+    font-size: 20px;
+    font-weight: bold;
+    .contact-item__container{
+        // background-color: cyan;
+        width: 950px;
+        margin: auto;
+        .contact-item{
+            display: inline-block;
+            margin: 0 40px;
+            &__content{
+                text-align: center;
+                background-repeat: no-repeat;
+                background-position: top center;
+                background-size: 100px;
+                &__link{
+                    display: block;
+                    width: 150px;
+                    padding: 110px 0 0;
+                }
+                &--cv{
+                    background-image: url("images/social-icons/document-white.svg")
+                }
+                &--cv:hover{
+                    background-image: url("images/social-icons/document-color.svg")
+                }
+
+                &--github{
+                    background-image: url("images/social-icons/github-white.svg")
+                }
+                &--github:hover{
+                    background-image: url("images/social-icons/github-color.svg")
+                }
+
+                &--codepen{
+                    background-image: url("images/social-icons/codepen-white.svg")
+                }
+                &--codepen:hover{
+                    background-image: url("images/social-icons/codepen-color.svg")
+                }
+
+                &--linkedin{
+                    background-image: url("images/social-icons/linkedin-white.svg")
+                }
+                &--linkedin:hover{
+                    background-image: url("images/social-icons/linkedin-color.svg")
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 991px){
+    #contact-bar .contact-item__container{
+        width: 770px;
+        .contact-item{
+            margin: 0 16px;
+        }
+    } 
+}
+
+@media screen and (max-width: 767px){
+    #contact-bar .contact-item__container{
+        width: 430px;
+        .contact-item{
+            margin: 30px 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+    #contact-bar .contact-item__container{
+        width: 320px;
+        .contact-item{
+            &__content{
+                background-size: 80px;
+                &__link{
+                    width: 97px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 374px){
+    #contact-bar .contact-item__container{
+        width: 286px;
+        .contact-item{
+            &__content__link{
+                width: 80px;
+            }
         }
     }
 }
