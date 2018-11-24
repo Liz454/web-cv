@@ -4,7 +4,7 @@ body {
   scroll-behavior: smooth;
 }
 section {
-  padding: 100px 0;
+  padding: 50px 0;
 }
 h1 {
   margin: 0;
@@ -17,8 +17,22 @@ h1 {
   max-width: 1000px;
   margin: auto;
 }
+.hidden {
+  display: none;
+}
+.b-padding-30 {
+  padding-bottom: 30px;
+}
+.section-padding {
+  padding: 0 50px;
+}
+@media screen and (max-width: 767px) {
+  .section-padding {
+    padding: 0 20px;
+  }
+}
 #nav {
-  background-color: #6980a7;
+  background-color: #91ddeb;
   font-size: 20px;
   padding: 10px;
   position: sticky;
@@ -27,6 +41,10 @@ h1 {
 #nav .link {
   color: #fff;
   margin: 0 3%;
+}
+#nav .link:hover {
+  color: #f7cb8a;
+  font-weight: bold;
 }
 @media screen and (max-width: 768px) {
   #nav .link {
@@ -79,19 +97,63 @@ h1 {
     padding: 30% 0 20%;
   }
 }
+#about .about__top {
+  width: 100%;
+  text-align: center;
+}
 #about .about__left {
   float: left;
-  margin: 50px 150px 50px 0;
-}
-#about .about__left .profile-image {
-  width: 300px;
+  width: 250px;
+  height: 250px;
+  background-image: url('images/profile-image.jpg');
+  background-size: cover;
+  box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.2);
 }
 #about .about__right {
-  margin-left: 100px;
+  margin-left: 350px;
+}
+.other {
+  border-radius: 5px;
+  box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.2);
+}
+.other__container {
+  cursor: pointer;
+  text-align: justify;
+}
+.other__container .other__btn {
+  display: inline-block;
+  background-color: #ececec;
+  padding: 10px 0;
+  text-align: center;
+  width: 33.33%;
+}
+.other__container .other__btn--active {
+  background-color: #fff;
+  color: #000;
+}
+.other .other-content {
+  padding: 10px 20px;
+}
+@media screen and (max-width: 767px) {
+  #about .about__left {
+    margin: -50px 0 20px;
+    padding: 0 0 50px;
+    width: 100%;
+    height: 200px;
+    background-image: url('images/profile-image-wide.png');
+  }
+  #about .about__right {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 420px) {
+  .other__btn {
+    font-size: 14px;
+  }
 }
 #contact-bar {
   padding: 30px 0;
-  background-color: #e5dad5;
+  background-color: #f7cb8a;
   font-size: 20px;
   font-weight: bold;
 }
@@ -108,6 +170,7 @@ h1 {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 100px;
+  transition: 0.4s;
 }
 #contact-bar .contact-item__container .contact-item__content__link {
   display: block;
@@ -174,5 +237,13 @@ h1 {
   }
 }
 #work {
-  background-color: #6980a7;
+  background-color: #91ddeb;
+}
+#work .work-card {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }

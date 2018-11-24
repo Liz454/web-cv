@@ -29,7 +29,7 @@
             <div class="container">
                 <div class="header-content">
                     <h1>Lizzie Gasson</h1>
-                    <p>Parnell, Auckland | <a class="link" href="tel:0211166767">0211166767</a> | lizzie.gasson@gmail.com</p>
+                    <p>Parnell, Auckland - <a class="link" href="tel:0211166767">0211166767</a> - lizzie.gasson@gmail.com</p>
                 </div>
                 <button class="btn-arrow" onclick="location.href='#about'"></button>
             </div>
@@ -37,22 +37,61 @@
 
 
         <section id="about">
-            <div class="container">
+            <div class="container section-padding">
+                <!-- <div class="about__top">
+                    <h2>About me</h2>
+                </div> -->
                 <div class="about__left">
-                    <img class="profile-image" src="images/profile-image.jpg" alt="Picture of Lizzie">
                 </div>
                 <div class="about__right">
                     <div>
                         <h2>Objective</h2>
-                        <p>...</p>
+                        <p>I would love to work in a job where I can explore front end programming, web development and web design. I am looking to expand my knowledge and build my skills in front end development.</p>
                     </div>
                     <div>
                         <h2>Statement</h2>
-                        <p>...</p>
+                        <p class="b-padding-30">I have recently finished studying computer science at the University of Auckland, and have been working as a junior front end developer at IAG since July, 2018. I have a particular interest in front end development, although I am eager to learn about all aspects of development and the technology industry. </p>
                     </div>
-                    <div>
-                        <h2>Others</h2>
-                        <p>...</p>
+                    <!--  -->
+                </div>
+                <div class="other">
+                    <div class="other__container">
+                        <div id="other-q-btn" class="other__btn other__btn--active" onClick="otherTabs('other-q')">Qualifications</div><div id="other-a-btn" class="other__btn" onClick="otherTabs('other-a')">Achievements</div><div id="other-e-btn" class="other__btn" onClick="otherTabs('other-e')">Extracurricular</div>
+                    </div>
+                    <div class="other-content">
+                        <div id="other-q" class="other-active" >
+                            <h3>High school</h3>
+                            <p>Graduated ACG Strathallan, CIE</p>
+                                
+                            <h3>Information systems</h3>
+                            <p>IIBA Certificate in Business Analysis</p>
+                                
+                            <h3>University</h3>
+                            <p>Bachelor of Science at the University of Auckland, with majors Computer Science and Information Systems</p>
+                                
+                            <p>GPA – 6.6</p>
+                                
+                        </div>
+                        <div id="other-a" class="hidden" >
+                            <h3>Young Designer of the Year Award </h3>
+                            <p>2014 - 2nd in photography</p>
+                            <p>2015 - 2nd in photography</p>
+                            
+                            <h3>Strathallan prize giving</h3>
+                            <p>1st in A2 Photography</p>
+                            <p>1st in AS Photography</p>
+                        </div>
+                        <div id="other-e" class="hidden" >
+                            <h3>Waiuku Camera Club</h3>
+                            <p>I was a member of the Waiuku Camera Club as a way for me to get inspiration for new photography projects and to get feedback on my work. I won multiple awards such as most points in my first year as a member.</p>
+                            
+                            <h3>School Event Photography</h3>
+                            <p>I was the photographer for many school events, some of my photos being used in newspapers.</p>
+                            
+                            <h3>Cheerleading</h3>
+                            <p>I was part of two cheerleading teams for which I competed around Auckland and around the country.</p>
+                                
+                        </div>
                     </div>
                 </div>
             </div>
@@ -69,17 +108,17 @@
                     </div>
                     <div class="contact-item">
                         <div class="contact-item__content contact-item__content--github">
-                            <a href="#" class="contact-item__content__link link">Github</a>
+                            <a target="_blank" href="https://github.com/Liz454" class="contact-item__content__link link">Github</a>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-item__content contact-item__content--codepen">
-                            <a href="#" class="contact-item__content__link link">Codepen</a>
+                            <a target="_blank" href="https://codepen.io/LizzieGasson/" class="contact-item__content__link link">Codepen</a>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-item__content contact-item__content--linkedin">
-                            <a href="#" class="contact-item__content__link link">Linkedin</a>
+                            <a target="_blank" href="https://www.linkedin.com/in/lizziegasson/" class="contact-item__content__link link">Linkedin</a>
                         </div>
                     </div>
                 </div>
@@ -91,11 +130,13 @@
             <div class="container">
                 <h2>Skills</h2>
                 <h3>Programming</h3>
-                <p>...</p>
+                <p>Throughout my time working as a front-end developer I have improved my skills in html, javascript and css. I have also gained more knowledge about the process of building a website. During my education I have used Python, Java, C, HTML, CSS, SQL, OpenGL, VisualBasic and various other programming languages. I also have experience using packet tracer, imageJ and database programs. My strongest languages are html, css, JavaScript and python (which I have used it for assignments and writing code every semester at university).</p>
                 <h3>Customer service</h3>
-                <p>...</p>
+                <p>I have worked for about two years in customer service jobs. I am  empathetic and I am happy to take the time to help customers find exactly what they need. </p>
                 <h3>Photography</h3>
-                <p>...</p>
+                <p>Photography has given me a good eye for artistic design which helps with designing and formatting programs and web pages.
+                At school I learned to use Photoshop, and through my own research and extensive use I became skilled at doing unique and creative manipulations.
+                </p>
             </div>
         </section>
 
@@ -103,29 +144,37 @@
         <section id="work">
             <div class="container">
                 <h2>Work</h2>
-                <div>
+                <div class="work-card">
                     <h3>IAG</h3>
-                    <p>...</p>
+                    <p>Junior developer | July 2018 - Current</p>
+                    <p></p>
                 </div>
-                <div>
+                <div class="work-card">
                     <h3>Zara</h3>
-                    <p>...</p>
+                    <p>Sales assistant | December 2016 – July 2018</p>
+                    <p>
+                        At Zara, I worked with a big team of people. I often had to work to complete tasks as a group, and other times I worked independently, always to strict time targets. Quite often, I had to decide on my own how to complete a task in the most efficient way, or to organize and delegate jobs to others. I worked in almost every aspect of the store, from customer service on the shop floor, to unpacking and processing deliveries in the stockroom.
+                    </p>
                 </div>
-                <div>
+                <div class="work-card">
                     <h3>MyTuition</h3>
-                    <p>...</p>
+                    <p>Tutor | June 2016 – December 2016</p>
+                    <p>I tutored AS and IGCSE maths during my first year at university. This helped me with my organization skills as I had to prepare lessons for the students as well as following up after with feedback and helpful study material.</p>
                 </div>
-                <div>
+                <div class="work-card">
                     <h3>Stonz Jewellers</h3>
-                    <p>...</p>
+                    <p>Sales assistant | November 2015 – December 2015</p>
+                    <p>During my time at Stonz I improved my communication and customer service skills. I had to learn a lot of information about the product very quickly to be able to sell effectively.</p>
                 </div>
-                <div>
+                <div class="work-card">
                     <h3>KJA Photography</h3>
-                    <p>...</p>
+                    <p>Photographer | 2014 – Ongoing</p>
+                    <p>As a photographer for KJA I have done photography for events such as weddings, balls and even New Zealand Fashion Week. I have worked either on my own for smaller events, or in a team of two or three for bigger ones.</p>
                 </div>
-                <div>
+                <div class="work-card">
                     <h3>Clevedon Farmers Market</h3>
-                    <p>...</p>
+                    <p>Stallholder | 2013 – Ongoing</p>
+                    <p>Over the years I have helped sell fruit at the local farmers market with my family. It is a very social event as I would have conversations with many of the customers and other stallholders.</p>
                 </div>
             </div>
         </section>
