@@ -1,5 +1,5 @@
 @col1: #91ddeb;
-@col2: #f7cb8a;
+@col2: #ffdca8;
 @colgrey: #ececec;
 @titlefont: 'Lancelot', cursive;
 @bodyfont: 'Quicksand', sans-serif;
@@ -17,7 +17,9 @@ section{
 h1{
     margin: 0;
 }
-
+.section-heading{
+    text-align: center;
+}
 .link{
     text-decoration: none;
     color: #fff;
@@ -40,40 +42,64 @@ h1{
         padding: 0 20px;
     }
 }
+@media screen and (max-width: 767px){
+    p{
+        font-size: 14px;
+    }
+}
+
 
 
 #nav{
-    background-color: @col1;
     font-size: 20px;
-    padding: 10px;
-    position: sticky;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
     top: 0;
-    .link{
-        color: #fff;
-        margin: 0 3%;
+    transition: 1s;
+    .link-container{
+        display: inline-block;
+        width: 20%;
+        text-align: center;
+        .link{
+            color: #fff;
+        }
+        .link:hover{
+            color: @col2;
+        }
     }
 }
-#nav .link:hover{
-    color: @col2;
-    font-weight: bold;
+.navbar-scrolled{
+    background-color: @col1;
 }
 @media screen and (max-width: 768px){
     #nav .link{
-        width: 5%;
         font-size: 16px;
-        margin: 0 3%;
     }
 }
-@media screen and (max-width: 480px){
-    #nav .link{
-        font-size: 14px;
-        margin: 0 3px;
+@media screen and (max-width: 450px){
+    #nav{
+        padding: 10px;
+        .link-container .link{
+            font-size: 14px;
+        } 
+        .link-sm{
+            width: 15%;
+        }
+        .link-md{
+            width: 20%;
+        }
+        .link-lg{
+            width: 30%;
+        }
     }
 }
 
+
+
 #header{
     text-align: center;
-    background-image: url("images/background-image.jpg");
+    background-image: url("images/background-image-2.jpg");
     background-size: cover;
     color: #fff;
     padding: 0;
@@ -107,6 +133,13 @@ h1{
 @media screen and (min-width: 990px){
     #header .header-content{
         padding: 30% 0 20%;
+    }
+}
+@media screen and (max-width: 767px){
+    #header .header-content {
+        h1{
+            font-size: 50px;
+        }
     }
 }
 
@@ -143,17 +176,24 @@ h1{
             padding: 10px 0;
             text-align: center;
             width: 33.33%;
+            transition: 0.5s;
+        }
+        .other__btn:hover{
+            background-color: #d1d1d1;
         }
         .other__btn--active{
             background-color: #fff;
             color: #000;
         }
+        .other__btn--active:hover{
+            background-color: #fff;
+        }
     }
-
     .other-content{
         padding: 10px 20px;
     }
 }
+
 @media screen and (max-width: 767px){
     #about{
         .about{
@@ -163,7 +203,6 @@ h1{
                 width: 100%;
                 height: 200px;
                 background-image: url('images/profile-image-wide.png');
-
             }
             &__right{
                 margin-left: 0;
@@ -280,12 +319,17 @@ h1{
 
 #work{
     background-color: @col1;
-    .work-card{
-        background-color: #fff;
-        border-radius: 5px;
-        padding: 10px;
-        margin: 10px;
-        box-shadow: @shadow;
-        text-align: center;
+    .work-card-container{
+        .work-card{
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 20px;
+            box-shadow: @shadow;
+            text-align: center;
+            width: 300px;
+            height: 400px;
+            display: inline-block;
+        }
     }
 }

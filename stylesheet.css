@@ -9,6 +9,9 @@ section {
 h1 {
   margin: 0;
 }
+.section-heading {
+  text-align: center;
+}
 .link {
   text-decoration: none;
   color: #fff;
@@ -31,37 +34,58 @@ h1 {
     padding: 0 20px;
   }
 }
+@media screen and (max-width: 767px) {
+  p {
+    font-size: 14px;
+  }
+}
 #nav {
-  background-color: #91ddeb;
   font-size: 20px;
-  padding: 10px;
-  position: sticky;
+  padding: 10px 0;
+  width: 100%;
+  position: fixed;
   top: 0;
+  transition: 1s;
 }
-#nav .link {
+#nav .link-container {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+}
+#nav .link-container .link {
   color: #fff;
-  margin: 0 3%;
 }
-#nav .link:hover {
-  color: #f7cb8a;
-  font-weight: bold;
+#nav .link-container .link:hover {
+  color: #ffdca8;
+}
+.navbar-scrolled {
+  background-color: #91ddeb;
 }
 @media screen and (max-width: 768px) {
   #nav .link {
-    width: 5%;
     font-size: 16px;
-    margin: 0 3%;
   }
 }
-@media screen and (max-width: 480px) {
-  #nav .link {
+@media screen and (max-width: 450px) {
+  #nav {
+    padding: 10px;
+  }
+  #nav .link-container .link {
     font-size: 14px;
-    margin: 0 3px;
+  }
+  #nav .link-sm {
+    width: 15%;
+  }
+  #nav .link-md {
+    width: 20%;
+  }
+  #nav .link-lg {
+    width: 30%;
   }
 }
 #header {
   text-align: center;
-  background-image: url("images/background-image.jpg");
+  background-image: url("images/background-image-2.jpg");
   background-size: cover;
   color: #fff;
   padding: 0;
@@ -97,6 +121,11 @@ h1 {
     padding: 30% 0 20%;
   }
 }
+@media screen and (max-width: 767px) {
+  #header .header-content h1 {
+    font-size: 50px;
+  }
+}
 #about .about__top {
   width: 100%;
   text-align: center;
@@ -126,10 +155,17 @@ h1 {
   padding: 10px 0;
   text-align: center;
   width: 33.33%;
+  transition: 0.5s;
+}
+.other__container .other__btn:hover {
+  background-color: #d1d1d1;
 }
 .other__container .other__btn--active {
   background-color: #fff;
   color: #000;
+}
+.other__container .other__btn--active:hover {
+  background-color: #fff;
 }
 .other .other-content {
   padding: 10px 20px;
@@ -153,7 +189,7 @@ h1 {
 }
 #contact-bar {
   padding: 30px 0;
-  background-color: #f7cb8a;
+  background-color: #ffdca8;
   font-size: 20px;
   font-weight: bold;
 }
@@ -239,11 +275,14 @@ h1 {
 #work {
   background-color: #91ddeb;
 }
-#work .work-card {
+#work .work-card-container .work-card {
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 10px;
-  margin: 10px;
+  margin: 20px;
   box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.2);
   text-align: center;
+  width: 300px;
+  height: 400px;
+  display: inline-block;
 }

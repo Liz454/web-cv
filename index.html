@@ -16,11 +16,18 @@
     <body>
         <section id="nav">
             <div class="container">
-                <a class="link" href="#about">About</a>
-                <a class="link" href="#skills">Skills</a>
-                <a class="link" href="#work">Work</a>
-                <a class="link" href="#photography">Photography</a>
-                <a class="link" href="#contact-page">Contact</a>
+                <div 
+                    class="link-container link-sm"><a class="link" href="#about">About</a>
+                </div><div 
+                    class="link-container link-sm"><a class="link" href="#skills">Skills</a>
+                </div><div 
+                    class="link-container link-sm"><a class="link" href="#work">Work</a>
+                </div><div 
+                    class="link-container link-lg"><a class="link" href="#photography">Photography</a>
+                </div><div 
+                    class="link-container link-md"><a class="link" href="#contact-page">Contact</a>
+                </div>
+                
             </div>
         </section>
 
@@ -45,18 +52,22 @@
                 </div>
                 <div class="about__right">
                     <div>
-                        <h2>Objective</h2>
+                        <h3>Objective</h3>
                         <p>I would love to work in a job where I can explore front end programming, web development and web design. I am looking to expand my knowledge and build my skills in front end development.</p>
                     </div>
                     <div>
-                        <h2>Statement</h2>
+                        <h3>Statement</h3>
                         <p class="b-padding-30">I have recently finished studying computer science at the University of Auckland, and have been working as a junior front end developer at IAG since July, 2018. I have a particular interest in front end development, although I am eager to learn about all aspects of development and the technology industry. </p>
                     </div>
                     <!--  -->
                 </div>
                 <div class="other">
                     <div class="other__container">
-                        <div id="other-q-btn" class="other__btn other__btn--active" onClick="otherTabs('other-q')">Qualifications</div><div id="other-a-btn" class="other__btn" onClick="otherTabs('other-a')">Achievements</div><div id="other-e-btn" class="other__btn" onClick="otherTabs('other-e')">Extracurricular</div>
+                        <div id="other-q-btn" class="other__btn other__btn--active" onClick="otherTabs('other-q')">Qualifications
+
+                        </div><div id="other-a-btn" class="other__btn" onClick="otherTabs('other-a')">Achievements
+
+                        </div><div id="other-e-btn" class="other__btn" onClick="otherTabs('other-e')">Extracurricular</div>
                     </div>
                     <div class="other-content">
                         <div id="other-q" class="other-active" >
@@ -127,7 +138,7 @@
 
 
         <section id="skills">
-            <div class="container">
+            <div class="container section-padding">
                 <h2>Skills</h2>
                 <h3>Programming</h3>
                 <p>Throughout my time working as a front-end developer I have improved my skills in html, javascript and css. I have also gained more knowledge about the process of building a website. During my education I have used Python, Java, C, HTML, CSS, SQL, OpenGL, VisualBasic and various other programming languages. I also have experience using packet tracer, imageJ and database programs. My strongest languages are html, css, JavaScript and python (which I have used it for assignments and writing code every semester at university).</p>
@@ -143,38 +154,40 @@
 
         <section id="work">
             <div class="container">
-                <h2>Work</h2>
-                <div class="work-card">
-                    <h3>IAG</h3>
-                    <p>Junior developer | July 2018 - Current</p>
-                    <p></p>
-                </div>
-                <div class="work-card">
-                    <h3>Zara</h3>
-                    <p>Sales assistant | December 2016 – July 2018</p>
-                    <p>
-                        At Zara, I worked with a big team of people. I often had to work to complete tasks as a group, and other times I worked independently, always to strict time targets. Quite often, I had to decide on my own how to complete a task in the most efficient way, or to organize and delegate jobs to others. I worked in almost every aspect of the store, from customer service on the shop floor, to unpacking and processing deliveries in the stockroom.
-                    </p>
-                </div>
-                <div class="work-card">
-                    <h3>MyTuition</h3>
-                    <p>Tutor | June 2016 – December 2016</p>
-                    <p>I tutored AS and IGCSE maths during my first year at university. This helped me with my organization skills as I had to prepare lessons for the students as well as following up after with feedback and helpful study material.</p>
-                </div>
-                <div class="work-card">
-                    <h3>Stonz Jewellers</h3>
-                    <p>Sales assistant | November 2015 – December 2015</p>
-                    <p>During my time at Stonz I improved my communication and customer service skills. I had to learn a lot of information about the product very quickly to be able to sell effectively.</p>
-                </div>
-                <div class="work-card">
-                    <h3>KJA Photography</h3>
-                    <p>Photographer | 2014 – Ongoing</p>
-                    <p>As a photographer for KJA I have done photography for events such as weddings, balls and even New Zealand Fashion Week. I have worked either on my own for smaller events, or in a team of two or three for bigger ones.</p>
-                </div>
-                <div class="work-card">
-                    <h3>Clevedon Farmers Market</h3>
-                    <p>Stallholder | 2013 – Ongoing</p>
-                    <p>Over the years I have helped sell fruit at the local farmers market with my family. It is a very social event as I would have conversations with many of the customers and other stallholders.</p>
+                <h2 class="section-heading">Work</h2>
+                <div class="work-card-container">
+                    <div class="work-card">
+                        <h3>IAG</h3>
+                        <p>Junior developer | July 2018 - Current</p>
+                        <p>At IAG I have mostly done work on the AMI, State and NZI websites. I have improved my web development skills and had personal mentoring with all the relevent languages, especially javascript. It has also given me an understanding of the agile methodology along with the meetings and steps that are taken.
+                        </p>
+                    </div>
+                    <div class="work-card">
+                        <h3>Zara</h3>
+                        <p>Sales assistant | December 2016 – July 2018</p>
+                        <p>At Zara, I worked with a big team of people. I often had to work to complete tasks as a group, and other times I worked independently, always to strict time targets. Quite often, I had to decide on my own how to complete a task in the most efficient way, or to organize and delegate jobs to others. I worked in almost every aspect of the store, from customer service on the shop floor, to unpacking and processing deliveries in the stockroom.
+                        </p>
+                    </div>
+                    <div class="work-card">
+                        <h3>MyTuition</h3>
+                        <p>Tutor | June 2016 – December 2016</p>
+                        <p>I tutored AS and IGCSE maths during my first year at university. This helped me with my organization skills as I had to prepare lessons for the students as well as following up after with feedback and helpful study material.</p>
+                    </div>
+                    <div class="work-card">
+                        <h3>Stonz Jewellers</h3>
+                        <p>Sales assistant | November 2015 – December 2015</p>
+                        <p>During my time at Stonz I improved my communication and customer service skills. I had to learn a lot of information about the product very quickly to be able to sell effectively.</p>
+                    </div>
+                    <div class="work-card">
+                        <h3>KJA Photography</h3>
+                        <p>Photographer | 2014 – Ongoing</p>
+                        <p>As a photographer for KJA I have done photography for events such as weddings, balls and even New Zealand Fashion Week. I have worked either on my own for smaller events, or in a team of two or three for bigger ones.</p>
+                    </div>
+                    <div class="work-card">
+                        <h3>Clevedon Farmers Market</h3>
+                        <p>Stallholder | 2013 – Ongoing</p>
+                        <p>Over the years I have helped sell fruit at the local farmers market with my family. It is a very social event as I would have conversations with many of the customers and other stallholders.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -182,6 +195,7 @@
 
         <section id="photography">
             <div class="container">
+                <h2>Photography</h2>
             </div>
         </section>
 
