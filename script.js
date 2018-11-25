@@ -1,4 +1,16 @@
 window.onscroll = scrollNav;
+window.onload
+
+
+var tallestCard = document.getElementById('hi').clientHeight;
+var workCards = document.getElementsByClassName('work-card__inner');
+// for (var x in workCards){
+    console.log("height of tallest", tallestCard);
+    console.log("before", workCards[0].clientHeight);
+    workCards[0].clientHeight = tallestCard;
+    console.log("after", workCards[0].clientHeight);
+// }
+
 
 function scrollNav(){
     const nav = document.getElementById("nav")
