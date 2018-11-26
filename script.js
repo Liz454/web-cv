@@ -1,15 +1,37 @@
 window.onscroll = scrollNav;
-window.onload
+window.onload = setEqualHeight;
+window.onresize = checkIfResize;
 
+function checkIfResize(){
+    var w = window.innerWidth;
+    if(w % 5 == 0 || w == 767 || w == 770) {
+        setEqualHeight();
+    }
+}
 
-var tallestCard = document.getElementById('hi').clientHeight;
-var workCards = document.getElementsByClassName('work-card__inner');
-// for (var x in workCards){
-    console.log("height of tallest", tallestCard);
-    console.log("before", workCards[0].clientHeight);
-    workCards[0].clientHeight = tallestCard;
-    console.log("after", workCards[0].clientHeight);
-// }
+//work card heights
+function setEqualHeight(){
+    console.log("!!!");
+    var workCards = document.getElementsByClassName('work-card__inner');
+    for (var z in workCards){
+        if (workCards[z].clientHeight != undefined){
+            workCards[z].setAttribute("style", "height: auto");
+        }
+    } 
+    var height = 0;
+    for (var x in workCards){
+        var curr = workCards[x];
+        if (curr.clientHeight != undefined && curr.clientHeight > height){
+            height = curr.clientHeight;
+        }
+    }
+    for (var y in workCards){
+        if (workCards[y].clientHeight != undefined){
+            workCards[y].setAttribute("style", "height:" + height + "px");
+        }
+    }  
+
+}
 
 
 function scrollNav(){
