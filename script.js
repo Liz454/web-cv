@@ -1,18 +1,11 @@
 window.onscroll = scrollNav;
 window.onload = setEqualHeight;
-window.onresize = checkIfResize;
-
-function checkIfResize(){
-    var w = window.innerWidth;
-    if(w % 5 == 0 || w == 767 || w == 770) {
-        setEqualHeight();
-    }
-}
+window.onresize = setEqualHeight;
 
 //work card heights
 function setEqualHeight(){
-    console.log("!!!");
-    var workCards = document.getElementsByClassName('work-card__inner');
+    var workCards = $('.work-card__inner');
+
     for (var z in workCards){
         if (workCards[z].clientHeight != undefined){
             workCards[z].setAttribute("style", "height: auto");
@@ -35,23 +28,14 @@ function setEqualHeight(){
 
 
 function scrollNav(){
-    const nav = document.getElementById("nav")
-    // const navLinks = document.getElementsByClassName("nav-link")
-    if (document.documentElement.scrollTop > 500) {
-        nav.classList.add("navbar-scrolled")
-        // for (var x in navLinks){
-        //     navLinks[x].classList.remove("nav-link-s")
-        // }
+    if ($(document).scrollTop() > 500) {
+        $("#nav").addClass("navbar-scrolled");
     }else{
-        nav.classList.remove("navbar-scrolled")
-        // for (var x in navLinks){
-        //     navLinks[x].classList.add("nav-link-s")
-        // }
+        $("#nav").removeClass("navbar-scrolled");
     }
 }
 
 function otherTabs(contentName){
-
     var hide = document.getElementsByClassName('other-active');
     hide[0].classList.add('hidden');
     hide[0].classList.remove("other-active");

@@ -59,7 +59,7 @@ h1 {
   color: #fff;
 }
 #nav .link-container .link:hover {
-  color: #ffdca8;
+  color: #ffa8a8;
 }
 .navbar-scrolled {
   background-color: #91ddeb;
@@ -201,7 +201,7 @@ h1 {
 }
 #contact-bar {
   padding: 30px 0;
-  background-color: #ffdca8;
+  background-color: #ffa8a8;
   font-size: 20px;
   font-weight: bold;
 }
