@@ -48,3 +48,4 @@ function otherTabs(contentName){
     var showBtn = document.getElementById(contentName + "-btn");
     showBtn.classList.add('other__btn--active');
 }
+
