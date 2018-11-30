@@ -1,5 +1,5 @@
-@col1: #91ddeb;
-@col2: #ffa8a8;
+@col1: #9adaeb;
+@col2: #1f5150;
 @colgrey: #ececec;
 @titlefont: 'Lancelot', cursive;
 @bodyfont: 'Quicksand', sans-serif;
@@ -105,19 +105,38 @@ h1{
     background-size: cover;
     color: #fff;
     padding: 0;
+    height: 100vh;
     .header-content{
-        padding: 50% 0 20%;
+        padding-top: 40vh;
         h1{
             font-size: 60px;
             font-family: @titlefont;
         }
         p{
             font-size: 20px;
+            .header-link{
+                padding: 0 10px;
+            }
+            .header-link-inner{
+                padding-left: 25px;
+                background-size: 20px;
+                background-repeat: no-repeat;
+                background-position: left 60%;
+            }
+            .header-map{
+                background-image: url("images/social-icons/map.png")
+            }
+            .header-phone{
+                background-image: url("images/social-icons/phone.png")
+            }
+            .header-email{
+                background-image: url("images/social-icons/email.png")
+            }
         }
     }
     .btn-arrow{
         margin: 50px 0;
-        width: 40px;
+        width: 100%;
         height: 40px;
         cursor: pointer;
         background: none;
@@ -126,7 +145,10 @@ h1{
         background-repeat: no-repeat;
         background-position: center;
         background-size: 40px;
-        transition: 0.2s;
+        transition: 0.15s;
+        position: absolute;
+        bottom: 40px;
+        left: 0;
     }
     .btn-arrow:hover{
         background-size: 50px;
@@ -135,16 +157,16 @@ h1{
         outline: 0;
     }
 }
-@media screen and (min-width: 375px) and (max-width: 767px){
-    #header .header-content{
-        padding: 70% 0 20%;
-    }
-}
-@media screen and (min-width: 990px){
-    #header .header-content{
-        padding: 30% 0 20%;
-    }
-}
+// @media screen and (min-width: 375px) and (max-width: 767px){
+//     #header .header-content{
+//         padding: 70% 0 20%;
+//     }
+// }
+// @media screen and (min-width: 990px){
+//     #header .header-content{
+//         padding: 30% 0 20%;
+//     }
+// }
 @media screen and (max-width: 767px){
     #header .header-content {
         h1{
@@ -182,7 +204,7 @@ h1{
         text-align: justify;
         .other__btn{
             display: inline-block;
-            background-color: @colgrey;
+            background-color: @col1;
             padding: 10px 0;
             text-align: center;
             width: 33.33%;
@@ -366,4 +388,11 @@ h1{
             width: 100%;
         }
     }
+}
+
+.carousel-image{
+       background-image: url("images/carousel-images/1.JPG") 
+    }
+#photography{
+    background-size: 100%;
 }
