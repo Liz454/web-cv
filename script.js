@@ -28,7 +28,9 @@ function setEqualHeight(){
 
 
 function scrollNav(){
-    if ($(document).scrollTop() > 500) {
+    // if ($(document).scrollTop() > 500) {
+    console.log($('#about').offset().top);
+    if ($(document).scrollTop() > $('#about').offset().top - 50) {
         $("#nav").addClass("navbar-scrolled");
     }else{
         $("#nav").removeClass("navbar-scrolled");
