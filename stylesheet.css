@@ -14,6 +14,12 @@ h1 {
 }
 .section-heading {
   text-align: center;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .section-heading {
+    font-size: 26px;
+  }
 }
 .link {
   text-decoration: none;
@@ -167,7 +173,7 @@ h1 {
 }
 .other {
   border-radius: 5px;
-  box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ececec;
 }
 .other__container {
   cursor: pointer;
@@ -175,14 +181,14 @@ h1 {
 }
 .other__container .other__btn {
   display: inline-block;
-  background-color: #9adaeb;
+  background-color: #ececec;
   padding: 10px 0;
   text-align: center;
   width: 33.33%;
   transition: 0.5s;
 }
 .other__container .other__btn:hover {
-  background-color: #d1d1d1;
+  background-color: #f5f5f5;
 }
 .other__container .other__btn--active {
   background-color: #fff;
@@ -196,7 +202,7 @@ h1 {
 }
 @media screen and (max-width: 767px) {
   #about .about__left {
-    margin: -50px 0 20px;
+    margin: 0 0 20px;
     padding: 0 0 50px;
     width: 100%;
     height: 200px;
@@ -210,6 +216,37 @@ h1 {
   .other__btn {
     font-size: 14px;
   }
+}
+#skills .skills_container__outer .skills_container__middle {
+  height: 20px;
+  margin: 20px 30px;
+}
+#skills .skills_container__outer .skills_container__middle .skill-heading {
+  width: 20%;
+  display: inline-block;
+  text-align: right;
+}
+#skills .skills_container__outer .skills_container__middle .skill-heading p {
+  padding-right: 10px;
+  margin: 0;
+}
+#skills .skills_container__outer .skills_container__middle .skills_container__inner {
+  width: 80%;
+  float: right;
+}
+#skills .skills_container__outer .skills_container__middle .skills_container__inner .skill-element {
+  display: inline-block;
+  height: 2px;
+  margin: 9px 0;
+  border-radius: 10px;
+}
+#skills .skills_container__outer .skills_container__middle .skills_container__inner .skill-element__color {
+  width: 80%;
+  background-color: #9adaeb;
+}
+#skills .skills_container__outer .skills_container__middle .skills_container__inner .skill-element__background {
+  width: 20%;
+  background-color: #ececec;
 }
 #contact-bar {
   padding: 30px 0;
