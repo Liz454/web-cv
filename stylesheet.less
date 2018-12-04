@@ -1,6 +1,7 @@
-@col1: #9adaeb;
-@col2: #1f5150;
-@col3: #fffd9e;
+@col1: #4bd199;
+@col2: #f3ac50;
+@col3: #f490ba;
+@gradient1: linear-gradient(to right,#93ecae, #f9f96f);
 @colgrey: #ececec;
 @titlefont: 'Lancelot', cursive;
 @bodyfont: 'Quicksand', sans-serif;
@@ -263,18 +264,17 @@ h1{
                 width: 80%;
                 float: right;
                 .skill-element{
-                    display: inline-block;
-                    height: 2px;
-                    margin: 9px 0;
+                    height: 8px;
+                    margin: 6px 0;
                     border-radius: 10px;
                 }
-                .skill-element__color{
-                    width: 80%;
-                    background-color: @col1;
-                }
                 .skill-element__background{
-                    width: 20%;
-                    background-color: @colgrey;
+                    width: 100%;
+                    background-color: #fff;
+                    .skill-element__color{
+                        width: 10%;
+                        background-image: @gradient1;
+                    }
                 }
             }
         }

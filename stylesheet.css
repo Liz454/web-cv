@@ -65,10 +65,10 @@ h1 {
   color: #fff;
 }
 #nav .link-container .link:hover {
-  color: #1f5150;
+  color: #f3ac50;
 }
 .navbar-scrolled {
-  background-color: #9adaeb;
+  background-color: #4bd199;
 }
 @media screen and (max-width: 768px) {
   #nav .link {
@@ -235,22 +235,21 @@ h1 {
   float: right;
 }
 #skills .skills_container__outer .skills_container__middle .skills_container__inner .skill-element {
-  display: inline-block;
-  height: 2px;
-  margin: 9px 0;
+  height: 8px;
+  margin: 6px 0;
   border-radius: 10px;
 }
-#skills .skills_container__outer .skills_container__middle .skills_container__inner .skill-element__color {
-  width: 80%;
-  background-color: #9adaeb;
-}
 #skills .skills_container__outer .skills_container__middle .skills_container__inner .skill-element__background {
-  width: 20%;
-  background-color: #ececec;
+  width: 100%;
+  background-color: #fff;
+}
+#skills .skills_container__outer .skills_container__middle .skills_container__inner .skill-element__background .skill-element__color {
+  width: 10%;
+  background-image: linear-gradient(to right, #93ecae, #f9f96f);
 }
 #contact-bar {
   padding: 30px 0;
-  background-color: #1f5150;
+  background-color: #f3ac50;
   font-size: 20px;
   font-weight: bold;
 }
@@ -334,7 +333,7 @@ h1 {
   }
 }
 #work {
-  background-color: #9adaeb;
+  background-color: #4bd199;
 }
 #work h2 {
   color: #fff;

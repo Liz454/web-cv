@@ -37,6 +37,7 @@ function scrollNav(){
     }
 }
 
+//change to jquery
 function otherTabs(contentName){
     var hide = document.getElementsByClassName('other-active');
     hide[0].classList.add('hidden');
@@ -51,3 +52,8 @@ function otherTabs(contentName){
     showBtn.classList.add('other__btn--active');
 }
 
+function setSkillValue(){
+    // var skills = $(".skill-element__color");
+    // var skillVals = skills.dataset["skill-level"];
+    // console.log(skills, skillVals);
+}
