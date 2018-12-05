@@ -65,7 +65,7 @@ h1 {
   color: #fff;
 }
 #nav .link-container .link:hover {
-  color: #f3ac50;
+  color: #f9f96f;
 }
 .navbar-scrolled {
   background-color: #4bd199;
@@ -217,39 +217,39 @@ h1 {
     font-size: 14px;
   }
 }
-#skills .skills_container__outer .skills_container__middle {
+#skills .skills_container__outer .skill_item {
   height: 20px;
   margin: 20px 30px;
 }
-#skills .skills_container__outer .skills_container__middle .skill-heading {
+#skills .skills_container__outer .skill_item .skill-heading {
   width: 20%;
   display: inline-block;
   text-align: right;
 }
-#skills .skills_container__outer .skills_container__middle .skill-heading p {
+#skills .skills_container__outer .skill_item .skill-heading p {
   padding-right: 10px;
   margin: 0;
 }
-#skills .skills_container__outer .skills_container__middle .skills_container__inner {
+#skills .skills_container__outer .skill_item .skill_graphic_container {
   width: 80%;
   float: right;
 }
-#skills .skills_container__outer .skills_container__middle .skills_container__inner .skill-element {
+#skills .skills_container__outer .skill_item .skill_graphic_container .skill_graphic {
   height: 8px;
   margin: 6px 0;
   border-radius: 10px;
 }
-#skills .skills_container__outer .skills_container__middle .skills_container__inner .skill-element__background {
+#skills .skills_container__outer .skill_item .skill_graphic_container .skill_graphic__background {
   width: 100%;
   background-color: #fff;
 }
-#skills .skills_container__outer .skills_container__middle .skills_container__inner .skill-element__background .skill-element__color {
+#skills .skills_container__outer .skill_item .skill_graphic_container .skill_graphic__background .skill_graphic__color {
   width: 10%;
   background-image: linear-gradient(to right, #93ecae, #f9f96f);
 }
 #contact-bar {
   padding: 30px 0;
-  background-color: #f3ac50;
+  background-color: #4bd199;
   font-size: 20px;
   font-weight: bold;
 }
@@ -374,5 +374,7 @@ h1 {
   background-image: url("images/carousel-images/1.JPG");
 }
 #photography {
-  background-size: 100%;
+  color: #fff;
+  background-size: cover;
+  height: 570px;
 }

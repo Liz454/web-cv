@@ -26,10 +26,8 @@ function setEqualHeight(){
 
 }
 
-
+//change nav background
 function scrollNav(){
-    // if ($(document).scrollTop() > 500) {
-    console.log($('#about').offset().top);
     if ($(document).scrollTop() > $('#about').offset().top - 50) {
         $("#nav").addClass("navbar-scrolled");
     }else{
@@ -52,8 +50,15 @@ function otherTabs(contentName){
     showBtn.classList.add('other__btn--active');
 }
 
-function setSkillValue(){
-    // var skills = $(".skill-element__color");
-    // var skillVals = skills.dataset["skill-level"];
-    // console.log(skills, skillVals);
+// function setSkillValue(){
+var skills = $(".skill_item");
+var skillNum = skills.length;
+var graphics = $('.skill_graphic__color');
+
+for (i=0; i<skillNum; i++){
+    var skillVal = skills[i].dataset.skillLevel;
+    var graphic = graphics[i];
+    graphic.setAttribute("style", "width: " + skillVal + "%");
+    console.log("skillVal:", skillVal);
+    console.log("graphic:", graphic);
 }

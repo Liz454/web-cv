@@ -1,5 +1,5 @@
 @col1: #4bd199;
-@col2: #f3ac50;
+@col2: #f9f96f;
 @col3: #f490ba;
 @gradient1: linear-gradient(to right,#93ecae, #f9f96f);
 @colgrey: #ececec;
@@ -248,7 +248,7 @@ h1{
 
 #skills{
     .skills_container__outer{
-        .skills_container__middle{
+        .skill_item{
             height: 20px;
             margin: 20px 30px;
             .skill-heading{
@@ -260,18 +260,18 @@ h1{
                     margin: 0;
                 }
             }
-            .skills_container__inner{
+            .skill_graphic_container{
                 width: 80%;
                 float: right;
-                .skill-element{
+                .skill_graphic{
                     height: 8px;
                     margin: 6px 0;
                     border-radius: 10px;
                 }
-                .skill-element__background{
+                .skill_graphic__background{
                     width: 100%;
                     background-color: #fff;
-                    .skill-element__color{
+                    .skill_graphic__color{
                         width: 10%;
                         background-image: @gradient1;
                     }
@@ -284,7 +284,7 @@ h1{
 
 #contact-bar{
     padding: 30px 0;
-    background-color: @col2;
+    background-color: @col1;
     font-size: 20px;
     font-weight: bold;
     .contact-item__container{
@@ -422,8 +422,10 @@ h1{
 }
 
 .carousel-image{
-       background-image: url("images/carousel-images/1.JPG") 
+       background-image: url("images/carousel-images/1.JPG") ;
     }
 #photography{
-    background-size: 100%;
+    color: #fff;
+    background-size: cover;
+    height: 570px;
 }
