@@ -1,5 +1,6 @@
 window.onscroll = scrollNav;
 window.onload = setEqualHeight;
+// window.onload = setSkillValue;
 window.onresize = setEqualHeight;
 
 //work card heights
@@ -50,15 +51,13 @@ function otherTabs(contentName){
     showBtn.classList.add('other__btn--active');
 }
 
-// function setSkillValue(){
-var skills = $(".skill_item");
-var skillNum = skills.length;
-var graphics = $('.skill_graphic__color');
-
-for (i=0; i<skillNum; i++){
-    var skillVal = skills[i].dataset.skillLevel;
-    var graphic = graphics[i];
-    graphic.setAttribute("style", "width: " + skillVal + "%");
-    console.log("skillVal:", skillVal);
-    console.log("graphic:", graphic);
-}
+// $( window ).load(function() {
+    var skills = $(".skill_item");
+    var skillNum = skills.length;
+    var graphics = $('.skill_graphic__c');
+    for (i=0; i<skillNum; i++){
+        var skillVal = skills[i].dataset.skillLevel;
+        var graphic = graphics[i];
+        graphic.setAttribute("style", "width: " + skillVal + "%");
+    }
+// });
