@@ -16,7 +16,7 @@ body{
     scroll-behavior: smooth;
 }
 section{
-    padding: 50px 0;
+    padding: 30px 0;
 }
 h1{
     margin: 0;
@@ -381,40 +381,66 @@ h1{
 }
 
 
+
 #work{
-    background-color: @col1;
-    h2{
-        color: #fff;
-    }
-    .work-card-container{
-        padding: 0 5px;
-        @media screen and (max-width: 480px){
-            padding: 0;
+    .work_card{
+        height: 200px;
+        &__left{
+            float: left;
+            height: inherit;
+            width: 27%;
+            text-align: center;
+            border-right: solid 1px @col3;
         }
-        .work-card{
-            width: 33.33%;
-            display: inline-block;
-            vertical-align:top;
-            margin-top: 20px;
-            @media screen and (max-width: 767px){
-                width: 50%;
-            }
-            @media screen and (max-width: 480px){
-                width: 100%;
-            }
-            &__inner{
-                background-color: #fff;
-                border-radius: 10px;
-                padding: 10px 20px;
-                margin: auto;
-                box-shadow: @shadow;
-                // text-align: center;
-                width: 80%;
-                height: auto;
-            }
+        &__middle{
+            width: 2%;
+            height: inherit;
+            float: left;
+        }
+        &__right{
+            // display: inline;
+            float: right;
+            height: inherit;
+            width: 70%;
         }
     }
 }
+
+
+// #work{
+//     background-color: @col1;
+//     h2{
+//         color: #fff;
+//     }
+//     .work_card-container{
+//         padding: 0 5px;
+//         @media screen and (max-width: 480px){
+//             padding: 0;
+//         }
+//         .work_card{
+//             width: 33.33%;
+//             display: inline-block;
+//             vertical-align:top;
+//             margin-top: 20px;
+//             @media screen and (max-width: 767px){
+//                 width: 50%;
+//             }
+//             @media screen and (max-width: 480px){
+//                 width: 100%;
+//             }
+//             &__inner{
+//                 background-color: #fff;
+//                 border-radius: 10px;
+//                 padding: 10px 20px;
+//                 margin: auto;
+//                 box-shadow: @shadow;
+//                 // text-align: center;
+//                 width: 80%;
+//                 height: auto;
+//             }
+//         }
+//     }
+// }
 
 
 .carousel-image{

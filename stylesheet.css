@@ -7,7 +7,7 @@ body {
   scroll-behavior: smooth;
 }
 section {
-  padding: 50px 0;
+  padding: 30px 0;
 }
 h1 {
   margin: 0;
@@ -365,44 +365,25 @@ h1 {
     width: 80px;
   }
 }
-#work {
-  background-color: #81cac2;
+#work .work_card {
+  height: 200px;
 }
-#work h2 {
-  color: #fff;
+#work .work_card__left {
+  float: left;
+  height: inherit;
+  width: 27%;
+  text-align: center;
+  border-right: solid 1px #f490ba;
 }
-#work .work-card-container {
-  padding: 0 5px;
+#work .work_card__middle {
+  width: 2%;
+  height: inherit;
+  float: left;
 }
-@media screen and (max-width: 480px) {
-  #work .work-card-container {
-    padding: 0;
-  }
-}
-#work .work-card-container .work-card {
-  width: 33.33%;
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 20px;
-}
-@media screen and (max-width: 767px) {
-  #work .work-card-container .work-card {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 480px) {
-  #work .work-card-container .work-card {
-    width: 100%;
-  }
-}
-#work .work-card-container .work-card__inner {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 10px 20px;
-  margin: auto;
-  box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.2);
-  width: 80%;
-  height: auto;
+#work .work_card__right {
+  float: right;
+  height: inherit;
+  width: 70%;
 }
 .carousel-image {
   background-image: url("images/carousel-images/3.JPG");
