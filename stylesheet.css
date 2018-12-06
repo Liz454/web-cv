@@ -56,6 +56,11 @@ h1 {
   top: 0;
   transition: 1s;
 }
+@media screen and (max-width: 450px) {
+  #nav {
+    padding: 10px;
+  }
+}
 #nav .link-container {
   display: inline-block;
   width: 20%;
@@ -64,16 +69,21 @@ h1 {
 #nav .link-container .link {
   color: #fff;
 }
+@media screen and (max-width: 768px) {
+  #nav .link-container .link {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #nav .link-container .link {
+    font-size: 14px;
+  }
+}
 #nav .link-container .link:hover {
   color: #f9f96f;
 }
 .navbar-scrolled {
-  background-color: #4bd199;
-}
-@media screen and (max-width: 768px) {
-  #nav .link {
-    font-size: 16px;
-  }
+  background-color: #81cac2;
 }
 @media screen and (max-width: 450px) {
   #nav {
@@ -106,6 +116,11 @@ h1 {
 #header .header-content h1 {
   font-size: 60px;
   font-family: 'Lancelot', cursive;
+}
+@media screen and (max-width: 767px) {
+  #header .header-content h1 {
+    font-size: 50px;
+  }
 }
 #header .header-content p {
   font-size: 20px;
@@ -150,11 +165,6 @@ h1 {
 #header .btn-arrow:focus {
   outline: 0;
 }
-@media screen and (max-width: 767px) {
-  #header .header-content h1 {
-    font-size: 50px;
-  }
-}
 #about .about__top {
   width: 100%;
   text-align: center;
@@ -168,38 +178,6 @@ h1 {
   box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
-#about .about__right {
-  margin-left: 300px;
-}
-.other {
-  border-radius: 5px;
-  border: 1px solid #ececec;
-}
-.other__container {
-  cursor: pointer;
-  text-align: justify;
-}
-.other__container .other__btn {
-  display: inline-block;
-  background-color: #ececec;
-  padding: 10px 0;
-  text-align: center;
-  width: 33.33%;
-  transition: 0.5s;
-}
-.other__container .other__btn:hover {
-  background-color: #f5f5f5;
-}
-.other__container .other__btn--active {
-  background-color: #fff;
-  color: #000;
-}
-.other__container .other__btn--active:hover {
-  background-color: #fff;
-}
-.other .other-content {
-  padding: 10px 20px;
-}
 @media screen and (max-width: 767px) {
   #about .about__left {
     margin: 0 0 20px;
@@ -208,14 +186,48 @@ h1 {
     height: 200px;
     background-image: url('images/profile-image-wide.png');
   }
+}
+#about .about__right {
+  margin-left: 300px;
+}
+@media screen and (max-width: 767px) {
   #about .about__right {
     margin-left: 0;
   }
 }
-@media screen and (max-width: 420px) {
-  .other__btn {
+#about .other {
+  border-radius: 5px;
+  border: 1px solid #ececec;
+}
+#about .other__container {
+  cursor: pointer;
+  text-align: justify;
+}
+#about .other__container .other__btn {
+  display: inline-block;
+  background-color: #ececec;
+  padding: 10px 0;
+  text-align: center;
+  width: 33.33%;
+  transition: 0.5s;
+}
+@media screen and (max-width: 767px) {
+  #about .other__container .other__btn {
     font-size: 14px;
   }
+}
+#about .other__container .other__btn:hover {
+  background-color: #f5f5f5;
+}
+#about .other__container .other__btn--active {
+  background-color: #fff;
+  color: #000;
+}
+#about .other__container .other__btn--active:hover {
+  background-color: #fff;
+}
+#about .other .other-content {
+  padding: 10px 20px;
 }
 #skills .skills_container__outer {
   padding: 0 0 20px;
@@ -270,7 +282,7 @@ h1 {
 }
 #contact-bar {
   padding: 30px 0;
-  background-color: #4bd199;
+  background-color: #81cac2;
   font-size: 20px;
   font-weight: bold;
 }
@@ -354,7 +366,7 @@ h1 {
   }
 }
 #work {
-  background-color: #4bd199;
+  background-color: #81cac2;
 }
 #work h2 {
   color: #fff;
