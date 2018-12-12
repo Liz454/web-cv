@@ -1,6 +1,6 @@
-@col1: #81cac2;
-@col2: #f9f96f;
-@col3: #f490ba;
+@col1: #68bdb3;
+@col2: #92cff1;
+@col3: #93ecae;
 @gradient1: linear-gradient(to right,#93ecae, #f9f96f);
 @colgrey: #ececec;
 @titlefont: 'Lancelot', cursive;
@@ -63,6 +63,7 @@ h1{
     position: fixed;
     top: 0;
     transition: 1s;
+    z-index: 1;
     @media screen and (max-width: 450px){
         padding: 10px;
     }
@@ -202,13 +203,13 @@ h1{
     .other{
         border-radius: 5px;
         // box-shadow: @shadow;
-        border: 1px solid @colgrey;
+        border: 1px solid @col2;
         &__container{
             cursor: pointer;
             text-align: justify;
             .other__btn{
                 display: inline-block;
-                background-color: @colgrey;
+                background-color: @col2;
                 padding: 10px 0;
                 text-align: center;
                 width: 33.33%;
@@ -385,6 +386,9 @@ h1{
 #work{
     .work_card{
         height: 200px;
+        @media screen and (max-width: 480px){
+            height: 400px;
+        }
         &__left{
             float: left;
             height: inherit;
@@ -396,6 +400,14 @@ h1{
             width: 2%;
             height: inherit;
             float: left;
+            #timeline_circle{
+                border-radius: 25px;
+                background-color: @col2;
+                width: 30px;
+                height: 30px;
+                margin-left: -15px;
+                // margin-top: 10px;
+            }
         }
         &__right{
             // display: inline;
@@ -406,7 +418,7 @@ h1{
     }
 }
 
-
+//card container thing
 // #work{
 //     background-color: @col1;
 //     h2{
@@ -444,8 +456,10 @@ h1{
 
 
 .carousel-image{
-       background-image: url("images/carousel-images/3.JPG") ;
-    }
+    //    background-image: url("images/carousel-images/3.JPG") ;
+
+    background-color: @col1;
+}
 #photography{
     color: #fff;
     background-size: cover;
