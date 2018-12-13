@@ -1,4 +1,5 @@
 
+
 //Scroll nav
 $( window ).scroll(function() {
     if ($(document).scrollTop() > $('#about').offset().top - 50) {
@@ -8,6 +9,8 @@ $( window ).scroll(function() {
     }
 });
 
+
+//////////////Skills section////////////
 
 //Set skill values
 $( window ).on("load", function() {
@@ -21,18 +24,36 @@ $( window ).on("load", function() {
     }
 });
 
-//set work container height, and adjust the line height and position on first and last cards
+
+//////////////Work section////////////
+
+//line height and card height
 $( window ).on("load", function() {
     var workCards = $('.work_card');
     workCards.each(function(){
-        //iterating through each card
-
-        //get height of right container and apply it to all elements in that card
-        
-
+        var rightHeight = $(this).find(".work_card__right").height();
+        $(this).height(rightHeight);
     });
-});
 
+    
+
+    var firstCard = workCards.first();
+    var firstMiddle = firstCard.find(".work_card__middle");
+    var firstHeight = firstCard.height()/2;
+    firstMiddle.css({
+        "margin-top" : firstHeight,
+        "height" : firstHeight
+    });
+
+    var lastCard = workCards.last();
+    var lastMiddle = lastCard.find(".work_card__middle");
+    var lastHeight = lastCard.height()/2;
+    lastMiddle.css({
+        "margin-bottom" : lastHeight,
+        "height" : lastHeight
+    });
+
+});
 
 //timeline circle
 $( window ).scroll(function() {
@@ -41,11 +62,11 @@ $( window ).scroll(function() {
     var halfWindow = windowHeight/3;
 
     var workCards = $('.work_card');
-    var firstCardTop = workCards.first().offset().top;
-    var lastCardTop = workCards.last().offset().top + 20;
+    var firstCard = workCards.first().offset().top + workCards.first().height()/2;
+    var lastCard = workCards.last().offset().top + workCards.last().height()/2;
 
-    var topScrollSection = firstCardTop - halfWindow;
-    var bottomScrollSection = lastCardTop - halfWindow;
+    var topScrollSection = firstCard - halfWindow;
+    var bottomScrollSection = lastCard - halfWindow;
 
     //inside the work section
     if ( (s > topScrollSection) && (s < bottomScrollSection)){
@@ -53,17 +74,19 @@ $( window ).scroll(function() {
             "position": "fixed",
             "top" : halfWindow
         });
+
     //below work section
     }else if(s > bottomScrollSection){
         $("#timeline_circle").css({ 
             "position": "absolute",
-            "top" : lastCardTop
+            "top" : lastCard
         });
+
     //above work section
     }else{
         $("#timeline_circle").css({ 
-            "position": "static",
-            "top" : firstCardTop
+            "position": "absolute",
+            "top" : firstCard
         });
     }
 });
@@ -76,39 +99,42 @@ $( window ).scroll(function() {
 
 /////////////////////////not currently used///////////////////////////////////
 
-function otherTabs(contentName){
-    var hide = document.getElementsByClassName('other-active');
-    hide[0].classList.add('hidden');
-    hide[0].classList.remove("other-active");
-    var hideBtn = document.getElementsByClassName('other__btn--active');
-    hideBtn[0].classList.remove('other__btn--active');
+/////tab function
+// function otherTabs(contentName){
+//     var hide = document.getElementsByClassName('other-active');
+//     hide[0].classList.add('hidden');
+//     hide[0].classList.remove("other-active");
+//     var hideBtn = document.getElementsByClassName('other__btn--active');
+//     hideBtn[0].classList.remove('other__btn--active');
 
-    var show = document.getElementById(contentName);
-    show.classList.add('other-active');
-    show.classList.remove('hidden');
-    var showBtn = document.getElementById(contentName + "-btn");
-    showBtn.classList.add('other__btn--active');
-}
+//     var show = document.getElementById(contentName);
+//     show.classList.add('other-active');
+//     show.classList.remove('hidden');
+//     var showBtn = document.getElementById(contentName + "-btn");
+//     showBtn.classList.add('other__btn--active');
+// }
 
-//work card heights, window.onresize = setEqualHeight;
-function setEqualHeight(){
-    var workCards = $('.work_card__right');
 
-    for (var z in workCards){
-        if (workCards[z].clientHeight != undefined){
-            workCards[z].setAttribute("style", "height: auto");
-        }
-    } 
-    var height = 0;
-    for (var x in workCards){
-        var curr = workCards[x];
-        if (curr.clientHeight != undefined && curr.clientHeight > height){
-            height = curr.clientHeight;
-        }
-    }
-    for (var y in workCards){
-        if (workCards[y].clientHeight != undefined){
-            workCards[y].setAttribute("style", "height:" + height + "px");
-        }
-    }  
-}
+
+////////work card heights, window.onresize = setEqualHeight;
+// function setEqualHeight(){
+//     var workCards = $('.work_card__right');
+
+//     for (var z in workCards){
+//         if (workCards[z].clientHeight != undefined){
+//             workCards[z].setAttribute("style", "height: auto");
+//         }
+//     } 
+//     var height = 0;
+//     for (var x in workCards){
+//         var curr = workCards[x];
+//         if (curr.clientHeight != undefined && curr.clientHeight > height){
+//             height = curr.clientHeight;
+//         }
+//     }
+//     for (var y in workCards){
+//         if (workCards[y].clientHeight != undefined){
+//             workCards[y].setAttribute("style", "height:" + height + "px");
+//         }
+//     }  
+// }

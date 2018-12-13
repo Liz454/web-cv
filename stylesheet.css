@@ -81,7 +81,7 @@ h1 {
   }
 }
 #nav .link-container .link:hover {
-  color: #92cff1;
+  color: #b4e5ff;
 }
 .navbar-scrolled {
   background-color: #68bdb3;
@@ -198,7 +198,7 @@ h1 {
 }
 #about .other {
   border-radius: 5px;
-  border: 1px solid #92cff1;
+  border: 1px solid #b4e5ff;
 }
 #about .other__container {
   cursor: pointer;
@@ -206,7 +206,7 @@ h1 {
 }
 #about .other__container .other__btn {
   display: inline-block;
-  background-color: #92cff1;
+  background-color: #b4e5ff;
   padding: 10px 0;
   text-align: center;
   width: 33.33%;
@@ -366,9 +366,6 @@ h1 {
     width: 80px;
   }
 }
-#work .work_card {
-  height: 200px;
-}
 @media screen and (max-width: 480px) {
   #work .work_card {
     height: 400px;
@@ -379,19 +376,19 @@ h1 {
   height: inherit;
   width: 27%;
   text-align: center;
-  border-right: solid 1px #93ecae;
 }
 #work .work_card__middle {
   width: 2%;
   height: inherit;
   float: left;
+  border-left: solid 1px #93ecae;
 }
 #work .work_card__middle #timeline_circle {
   border-radius: 25px;
-  background-color: #92cff1;
-  width: 30px;
-  height: 30px;
-  margin-left: -15px;
+  background-color: #b4e5ff;
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
 }
 #work .work_card__right {
   float: right;

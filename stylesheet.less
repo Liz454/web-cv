@@ -1,5 +1,5 @@
 @col1: #68bdb3;
-@col2: #92cff1;
+@col2: #b4e5ff;
 @col3: #93ecae;
 @gradient1: linear-gradient(to right,#93ecae, #f9f96f);
 @colgrey: #ececec;
@@ -385,7 +385,7 @@ h1{
 
 #work{
     .work_card{
-        height: 200px;
+        // height: 200px;
         @media screen and (max-width: 480px){
             height: 400px;
         }
@@ -394,19 +394,21 @@ h1{
             height: inherit;
             width: 27%;
             text-align: center;
-            border-right: solid 1px @col3;
+            // border-right: solid 1px @col3;
         }
         &__middle{
             width: 2%;
             height: inherit;
             float: left;
+            border-left: solid 1px @col3;
             #timeline_circle{
                 border-radius: 25px;
                 background-color: @col2;
-                width: 30px;
-                height: 30px;
-                margin-left: -15px;
-                // margin-top: 10px;
+                width: 20px;
+                height: 20px;
+                margin-left: -10px;
+                // transition: 3s;
+                // margin-top: 18px;
             }
         }
         &__right{
