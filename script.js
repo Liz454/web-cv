@@ -30,13 +30,21 @@ $( window ).on("load", function() {
 //line height and card height
 $( window ).on("load", function() {
     var workCards = $('.work_card');
+
     workCards.each(function(){
+        //set height of each card
         var rightHeight = $(this).find(".work_card__right").height();
         $(this).height(rightHeight);
+
+        var leftHeight = $(this).find(".work_card__left").height();
+        var innerLeft = $(this).find(".work_card__left").children().first();
+        var innerLeftHeight = innerLeft.height();
+        var leftTopMargin = (leftHeight - innerLeftHeight) / 2;
+        innerLeft.css("margin-top", leftTopMargin);
+        
     });
 
-    
-
+    //set line height for first card
     var firstCard = workCards.first();
     var firstMiddle = firstCard.find(".work_card__middle");
     var firstHeight = firstCard.height()/2;
@@ -45,6 +53,7 @@ $( window ).on("load", function() {
         "height" : firstHeight
     });
 
+    //set line height for last card
     var lastCard = workCards.last();
     var lastMiddle = lastCard.find(".work_card__middle");
     var lastHeight = lastCard.height()/2;
