@@ -18,9 +18,7 @@ $( window ).on("load", function() {
     var skillNum = skills.length;
     var graphics = $('.skill_graphic__c');
     for (i=0; i<skillNum; i++){
-        var skillVal = skills[i].dataset.skillLevel;
-        var graphic = graphics[i];
-        graphic.setAttribute("style", "width: " + skillVal + "%");
+        graphics[i].setAttribute("style", "width: " + skills[i].dataset.skillLevel + "%");
     }
 });
 
@@ -50,7 +48,6 @@ function workSection() {
 
 
     if ($(window).width() >= 768){ //Desktop ------------------------
-        console.log("desktop");
         var workCards = $('.work_card');
 
         workCards.each(function(){
@@ -87,7 +84,6 @@ function workSection() {
 
 
     }else{ //Mobile ----------------------------------
-        console.log("mobile");
         var cumu_width = 0;
         var workCards = $('.work_card');
         var container_padding = ($(window).width() * 0.3)/2 - 20;
