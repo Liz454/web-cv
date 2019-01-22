@@ -22,6 +22,11 @@ $( window ).on("load", function() {
     }
 });
 
+//Accordion
+$('.skills_container__outer').on('click', function(){
+    $(this).find('.skills__inner__hidden').slideToggle();
+});
+
 
 //////////////Work section////////////
 
@@ -146,6 +151,43 @@ $( window ).scroll(function() {
 });
 
 
+//////////////Photo section////////////
+var photoIndex = 0;
+var photosInAlbum = 3;
+
+function nextPhoto(){
+    if (photoIndex + 1 < photosInAlbum){
+        photoIndex += 1;
+    } else {
+        photoIndex = 0;
+    }
+    console.log("switch to", photoIndex);
+    $('.carousel-image').css({
+        'background-image': 'url("images/carousel-images/' + photoIndex + '.JPG")'
+    });
+}
+
+// $(window).on('load', function(){
+//     while (true){
+//         setTimeout(nextPhoto, 8000);
+//     };
+// });
+
+$('.carousel-image').on('click', nextPhoto);
+setTimeout(nextPhoto, 8000);
+
+//overlay
+$( window ).scroll(function() {
+    console.log($(window).scrollTop());
+    if ($(window).scrollTop() > ($('#photography').offset().top - $(window).height())){
+        $('.photography-overlay').fadeIn(2000);
+        $('.carousel-image').addClass('over-overlay');
+    } else {
+        $('.photography-overlay').fadeOut(2000);
+        $('.carousel-image').removeClass('over-overlay');
+    }
+});
+
 
 
 /////////////////////////not currently used///////////////////////////////////
@@ -163,29 +205,4 @@ $( window ).scroll(function() {
 //     show.classList.remove('hidden');
 //     var showBtn = document.getElementById(contentName + "-btn");
 //     showBtn.classList.add('other__btn--active');
-// }
-
-
-
-////////work card heights, window.onresize = setEqualHeight;
-// function setEqualHeight(){
-//     var workCards = $('.work_card__right');
-
-//     for (var z in workCards){
-//         if (workCards[z].clientHeight != undefined){
-//             workCards[z].setAttribute("style", "height: auto");
-//         }
-//     } 
-//     var height = 0;
-//     for (var x in workCards){
-//         var curr = workCards[x];
-//         if (curr.clientHeight != undefined && curr.clientHeight > height){
-//             height = curr.clientHeight;
-//         }
-//     }
-//     for (var y in workCards){
-//         if (workCards[y].clientHeight != undefined){
-//             workCards[y].setAttribute("style", "height:" + height + "px");
-//         }
-//     }  
 // }

@@ -242,39 +242,20 @@ h1 {
   padding: 0 0 20px;
 }
 #skills .skills_container__outer .skill_item {
-  height: 20px;
-  margin: 20px 30px;
-}
-@media screen and (max-width: 768px) {
-  #skills .skills_container__outer .skill_item {
-    height: 35px;
-    margin: 20px 0 ;
-  }
+  height: 35px;
+  margin: 20px 0 ;
 }
 #skills .skills_container__outer .skill_item .skill-heading {
-  width: 20%;
-  display: inline-block;
-  text-align: right;
-}
-@media screen and (max-width: 768px) {
-  #skills .skills_container__outer .skill_item .skill-heading {
-    width: auto;
-    text-align: left;
-  }
+  width: auto;
+  text-align: left;
 }
 #skills .skills_container__outer .skill_item .skill-heading p {
   padding-right: 10px;
   margin: 0;
 }
 #skills .skills_container__outer .skill_item .skill_graphic_container {
-  width: 80%;
-  float: right;
-}
-@media screen and (max-width: 768px) {
-  #skills .skills_container__outer .skill_item .skill_graphic_container {
-    width: 100%;
-    float: none;
-  }
+  width: 100%;
+  float: none;
 }
 #skills .skills_container__outer .skill_item .skill_graphic_container .skill_graphic {
   height: 8px;
@@ -288,6 +269,14 @@ h1 {
 #skills .skills_container__outer .skill_item .skill_graphic_container .skill_graphic__b .skill_graphic__c {
   width: 10%;
   background-image: linear-gradient(to right, #93ecae, #f9f96f);
+}
+@media screen and (max-width: 767px) {
+  .skills_container__outer {
+    cursor: pointer;
+  }
+  .skills_container__outer .skills__inner__hidden {
+    display: none;
+  }
 }
 #contact-bar {
   padding: 30px 0;
@@ -415,8 +404,7 @@ h1 {
     margin: 10px 10px;
     box-shadow: 0px 5px 15px 2px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    background-color: #68bdb3;
-    color: #fff;
+    background-color: #f7f7f7;
   }
   #work .work_card-container--inner .work_card__left {
     width: auto;
@@ -435,14 +423,35 @@ h1 {
     text-align: center;
   }
 }
-#portfolio .cp_embed_wrapper {
+#portfolio {
+  text-align: center;
+}
+#portfolio .portfolio_item {
+  padding: 50px 0;
+}
+#portfolio .portfolio_item .cp_embed_wrapper {
   margin: 50px 0;
+  box-shadow: 0px 5px 15px 2px rgba(0, 0, 0, 0.2);
 }
-.carousel-image {
-  background-color: #68bdb3;
+#photography .carousel-image {
+  position: relative;
+  background-image: url("images/carousel-images/0.JPG");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 600px;
+  width: 80%;
+  transition-duration: 1s;
+  margin: auto;
 }
-#photography {
-  color: #fff;
-  background-size: cover;
-  height: 570px;
+#photography .over-overlay {
+  z-index: 2;
+}
+.photography-overlay {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: none;
 }

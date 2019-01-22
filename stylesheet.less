@@ -248,32 +248,19 @@ h1{
     .skills_container__outer{
         padding: 0 0 20px;
         .skill_item{
-            height: 20px;
-            margin: 20px 30px;
-            @media screen and (max-width:768px){
-                height: 35px;
-                margin: 20px 0 ;
-            }
+            height: 35px;
+            margin: 20px 0 ;
             .skill-heading{
-                width: 20%;
-                display: inline-block;
-                text-align: right;
-                @media screen and (max-width:768px){
-                    width: auto;
-                    text-align: left;
-                }
+                width: auto;
+                text-align: left;
                 p{
                     padding-right: 10px;
                     margin: 0;
                 }
             }
             .skill_graphic_container{
-                width: 80%;
-                float: right;
-                @media screen and (max-width:768px){
-                    width: 100%;
-                    float: none;
-                }
+                width: 100%;
+                float: none;
                 .skill_graphic{
                     height: 8px;
                     margin: 6px 0;
@@ -288,8 +275,18 @@ h1{
                     }
                 }
             }
+              
         }
     }
+}
+@media screen and (max-width: 767px){
+    .skills_container__outer{
+        cursor: pointer;
+        .skills__inner__hidden{
+            display: none;
+        }
+    }
+
 }
 
 
@@ -430,33 +427,23 @@ h1{
 }
 // Mobile
 @media screen and (max-width: 767px){
-    // .work_card--first{
-    //     margin-left: 10vw;
-    // }
-    // .work_card--first{
-    //     margin-right: 10vw;
-    // }
     #work{
         .work_card-container{
             width: 100vw;
             overflow-y: hidden;
             overflow-x: scroll;
             &--inner{
-                // width: 2000px;
                 height: 500px;
-                // margin: 0 10vw;
                 .work_card{
-                    // border: 1px solid #000;
                     width: 70vw;
-                    // height: 450px;
                     display: inline-block;
                     vertical-align: top;
                     padding: 10px;
                     margin: 10px 10px;
                     box-shadow: @shadow;
                     border-radius: 10px;
-                    background-color: @col1;
-                    color: #fff;
+                    background-color: #f7f7f7;
+                    // color: #fff;
                     &__left{
                         width: auto;
                         float: none;
@@ -478,62 +465,44 @@ h1{
         }
     }
 }
-//card container thing
-// #work{
-//     background-color: @col1;
-//     h2{
-//         color: #fff;
-//     }
-//     .work_card-container{
-//         padding: 0 5px;
-//         @media screen and (max-width: 480px){
-//             padding: 0;
-//         }
-//         .work_card{
-//             width: 33.33%;
-//             display: inline-block;
-//             vertical-align:top;
-//             margin-top: 20px;
-//             @media screen and (max-width: 767px){
-//                 width: 50%;
-//             }
-//             @media screen and (max-width: 480px){
-//                 width: 100%;
-//             }
-//             &__inner{
-//                 background-color: #fff;
-//                 border-radius: 10px;
-//                 padding: 10px 20px;
-//                 margin: auto;
-//                 box-shadow: @shadow;
-//                 // text-align: center;
-//                 width: 80%;
-//                 height: auto;
-//             }
-//         }
-//     }
-// }
 
 
 #portfolio{
-    // height: 600px;
-    // background-color: #f7f7f7;
-    .cp_embed_wrapper{
-        margin: 50px 0;
+    text-align: center;
+    .portfolio_item{
+        padding: 50px 0;
+        .cp_embed_wrapper{
+            margin: 50px 0;
+            box-shadow: @shadow;
+        }
+    }
+    
+}
+
+#photography{
+    // padding: 0 10px 50px ;
+    .carousel-image{
+        position: relative;
+        background-image: url("images/carousel-images/0.JPG") ;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        // box-shadow: @shadow;
+        height: 600px;
+        width: 80%;
+        transition-duration: 1s;
+        // max-width: 1000px;
+        margin: auto;
+    }
+    .over-overlay{
+        z-index: 2;
     }
 }
-
-
-
-
-
-.carousel-image{
-    //    background-image: url("images/carousel-images/3.JPG") ;
-
-    background-color: @col1;
-}
-#photography{
-    color: #fff;
-    background-size: cover;
-    height: 570px;
+.photography-overlay{
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: none;
 }
