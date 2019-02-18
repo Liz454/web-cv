@@ -156,10 +156,17 @@ var photoIndex = 0;
 var photosInAlbum = 8;
 
 function changePhoto(){
-    console.log(photoIndex);
     $('.carousel-p').addClass('hidden');
     $('.p'+ photoIndex).removeClass('hidden');
     $('#carousel-image').attr("src", "images/carousel-images/" + photoIndex + ".JPG");
+    $('.carousel-btn').each(function(){
+        $(this).css({
+            "background-image": "url('images/social-icons/circle.svg')",
+        });
+    });
+    $('.carousel-btn').eq(photoIndex).css({
+        "background-image": "url('images/social-icons/circle-filled.svg')",
+    });
 }
 
 function nextPhoto(){

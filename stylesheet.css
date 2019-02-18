@@ -456,17 +456,20 @@ h1 {
 }
 @media (max-width: 480px) {
   #photography .carousel-content img {
-    width: 100%;
+    width: 95%;
   }
 }
 #photography .carousel-content .carousel-controls {
-  margin: 20px 0;
+  margin: 10px 0;
 }
 #photography .carousel-content .carousel-controls button {
   padding: 20px;
-}
-#photography .carousel-content .carousel-controls button img {
-  width: 15px;
+  width: 30px;
+  height: 30px;
+  background-image: url('images/social-icons/circle.svg');
+  background-size: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 #photography .over-overlay {
   z-index: 2;
