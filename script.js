@@ -153,7 +153,7 @@ $( window ).scroll(function() {
 
 //////////////Photo section////////////
 var photoIndex = 0;
-var photosInAlbum = 6;
+var photosInAlbum = 8;
 
 function nextPhoto(){
     if (photoIndex + 1 < photosInAlbum){
