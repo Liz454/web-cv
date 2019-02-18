@@ -155,16 +155,26 @@ $( window ).scroll(function() {
 var photoIndex = 0;
 var photosInAlbum = 8;
 
+function changePhoto(){
+    console.log(photoIndex);
+    $('.carousel-p').addClass('hidden');
+    $('.p'+ photoIndex).removeClass('hidden');
+    $('#carousel-image').attr("src", "images/carousel-images/" + photoIndex + ".JPG");
+}
+
 function nextPhoto(){
     if (photoIndex + 1 < photosInAlbum){
         photoIndex += 1;
     } else {
         photoIndex = 0;
     }
-    $('.carousel-p').addClass('hidden');
-    $('.p'+ photoIndex).removeClass('hidden');
-    $('#carousel-image').attr("src", "images/carousel-images/" + photoIndex + ".JPG");
+    changePhoto();
 }
+
+$('.carousel-btn').on('click', function(){
+    photoIndex = $(this).index();
+    changePhoto();
+});
 
 // $(window).on('load', function(){
 //     while (true){
@@ -172,7 +182,7 @@ function nextPhoto(){
 //     };
 // });
 
-$('.carousel-content').on('click', nextPhoto);
+$('#carousel-image').on('click', nextPhoto);
 // setTimeout(nextPhoto, 8000);
 
 //overlay

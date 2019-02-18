@@ -459,11 +459,14 @@ h1 {
     width: 100%;
   }
 }
+#photography .carousel-content .carousel-controls {
+  margin: 20px 0;
+}
 #photography .carousel-content .carousel-controls button {
   padding: 20px;
 }
 #photography .carousel-content .carousel-controls button img {
-  width: 20px;
+  width: 15px;
 }
 #photography .over-overlay {
   z-index: 2;
@@ -474,6 +477,6 @@ h1 {
   width: 100%;
   position: fixed;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.9);
   display: none;
 }
