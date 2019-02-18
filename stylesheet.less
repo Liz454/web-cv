@@ -247,6 +247,9 @@ h1{
 #skills{
     .skills_container__outer{
         padding: 0 0 20px;
+        h3::after{
+            background-image: url('images/social-icons/plus-circle.svg')
+        }
         .skill_item{
             height: 35px;
             margin: 20px 0 ;
@@ -442,7 +445,7 @@ h1{
                     margin: 10px 10px;
                     box-shadow: @shadow;
                     border-radius: 10px;
-                    background-color: #f7f7f7;
+                    background-color: #68bdb355;
                     // color: #fff;
                     &__left{
                         width: auto;
@@ -480,18 +483,33 @@ h1{
 }
 
 #photography{
-    // padding: 0 10px 50px ;
-    .carousel-image{
+    color: #fff;
+    text-align: center;
+    margin: 50px 0 100px;
+    button{
+        background-color: transparent;
+        outline: none;
+        border: none;
+    }
+    .carousel-content{
         position: relative;
-        background-image: url("images/carousel-images/0.JPG") ;
-        background-size: 100%;
-        background-repeat: no-repeat;
-        box-shadow: @shadow;
-        height: 600px;
-        width: 80%;
         transition-duration: 1s;
-        // max-width: 1000px;
-        margin: auto;
+        padding: 0;
+        img{
+            width: 80%;
+            @media (max-width: 480px) {
+                width: 100%;
+            }
+        }
+        .carousel-controls{
+            button{
+                padding: 20px;
+                img{
+                    width: 20px;
+                }
+                // width: 10px;
+            }
+        }
     }
     .over-overlay{
         z-index: 2;
