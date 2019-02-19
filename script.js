@@ -153,23 +153,13 @@ $( window ).scroll(function() {
 
 //////////////Photo section////////////
 var photoIndex = 0;
+var prevIndex;
 var photosInAlbum = 8;
+var photoDuration = 5000;
+var carouselInterval = setInterval(changePhotoIndex, photoDuration);
 
-function changePhoto(){
-    $('.carousel-p').addClass('hidden');
-    $('.p'+ photoIndex).removeClass('hidden');
-    $('#carousel-image').attr("src", "images/carousel-images/" + photoIndex + ".JPG");
-    $('.carousel-btn').each(function(){
-        $(this).css({
-            "background-image": "url('images/social-icons/circle.svg')",
-        });
-    });
-    $('.carousel-btn').eq(photoIndex).css({
-        "background-image": "url('images/social-icons/circle-filled.svg')",
-    });
-}
-
-function nextPhoto(){
+function changePhotoIndex(){
+    prevIndex = photoIndex;
     if (photoIndex + 1 < photosInAlbum){
         photoIndex += 1;
     } else {
@@ -178,19 +168,41 @@ function nextPhoto(){
     changePhoto();
 }
 
+function changePhoto(){
+    $('#carousel-image').attr("src", "images/carousel-images/" + photoIndex + ".JPG");
+    $('.carousel-p').addClass('hidden');
+    $('.p'+ photoIndex).removeClass('hidden');
+    $('.carousel-btn').eq(prevIndex).css({
+        "background-image": "url('images/social-icons/circle.svg')",
+    });
+    $('.carousel-btn').eq(photoIndex).css({
+        "background-image": "url('images/social-icons/circle-filled.svg')",
+    });
+}
+
+function resetInterval(){
+    clearInterval(carouselInterval);
+    carouselInterval = setInterval(changePhotoIndex, photoDuration);
+}
+
+$('#carousel-image').on('click', function(){
+    changePhotoIndex();
+    resetInterval();
+});
+
 $('.carousel-btn').on('click', function(){
     photoIndex = $(this).index();
     changePhoto();
+    resetInterval();
 });
 
-// $(window).on('load', function(){
-//     while (true){
-//         setTimeout(nextPhoto, 8000);
-//     };
-// });
+$('.carousel-btn').eq(photoIndex).css({
+    "background-image": "url('images/social-icons/circle-filled.svg')",
+});
 
-$('#carousel-image').on('click', nextPhoto);
-// setTimeout(nextPhoto, 8000);
+
+
+
 
 //overlay
 $( window ).scroll(function() {
@@ -204,6 +216,10 @@ $( window ).scroll(function() {
 });
 
 
+
+$('#back-to-top').on('click', function(){
+    $(window).scrollTop(0);
+});
 
 /////////////////////////not currently used///////////////////////////////////
 

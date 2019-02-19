@@ -1,6 +1,9 @@
-@col1: #68bdb3;
-@col2: #b4e5ff;
-@col3: #93ecae;
+// @col1: #68bdb3;
+// @col2: #b4e5ff;
+// @col3: #93ecae;
+@col1: #dadada;
+@col2: #949494;
+@col3: #464646;
 @gradient1: linear-gradient(to right,#93ecae, #f9f96f);
 @colgrey: #ececec;
 @titlefont: 'Lancelot', cursive;
@@ -497,8 +500,14 @@ h1{
         padding: 0;
         img{
             width: 80%;
-            @media (max-width: 480px) {
+            @media (max-width: 767px) {
                 width: 95%;
+            }
+            @media (max-width: 768px) {
+                width: 95%;
+            }
+            @media (min-width: 1500px) {
+                width: 100%;
             }
         }
         .carousel-controls{
@@ -511,7 +520,18 @@ h1{
                 background-size: 40%;
                 background-position: center;
                 background-repeat: no-repeat;
+                transition: 1s;
             }
+        }
+        #back-to-top{
+            font-family: @bodyfont;
+            color: #fff;
+            margin-top: 30vh;
+            transition: 0.5s;
+            font-size: 20px;
+            &:hover{
+                font-size: 25px;
+            } 
         }
     }
     .over-overlay{
