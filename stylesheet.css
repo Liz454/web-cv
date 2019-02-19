@@ -452,22 +452,7 @@ h1 {
   padding: 0;
 }
 #photography .carousel-content img {
-  width: 80%;
-}
-@media (max-width: 767px) {
-  #photography .carousel-content img {
-    width: 95%;
-  }
-}
-@media (max-width: 768px) {
-  #photography .carousel-content img {
-    width: 95%;
-  }
-}
-@media (min-width: 1500px) {
-  #photography .carousel-content img {
-    width: 100%;
-  }
+  width: 95%;
 }
 #photography .carousel-content .carousel-controls {
   margin: 10px 0;

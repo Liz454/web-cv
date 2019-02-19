@@ -153,13 +153,11 @@ $( window ).scroll(function() {
 
 //////////////Photo section////////////
 var photoIndex = 0;
-var prevIndex;
 var photosInAlbum = 8;
 var photoDuration = 5000;
 var carouselInterval = setInterval(changePhotoIndex, photoDuration);
 
 function changePhotoIndex(){
-    prevIndex = photoIndex;
     if (photoIndex + 1 < photosInAlbum){
         photoIndex += 1;
     } else {
@@ -169,11 +167,18 @@ function changePhotoIndex(){
 }
 
 function changePhoto(){
+    //change image
     $('#carousel-image').attr("src", "images/carousel-images/" + photoIndex + ".JPG");
+
+    //change blurb
     $('.carousel-p').addClass('hidden');
     $('.p'+ photoIndex).removeClass('hidden');
-    $('.carousel-btn').eq(prevIndex).css({
-        "background-image": "url('images/social-icons/circle.svg')",
+
+    //change carousel buttons
+    $('.carousel-btn').each(function(){
+        $(this).css({
+            "background-image": "url('images/social-icons/circle.svg')",
+        });
     });
     $('.carousel-btn').eq(photoIndex).css({
         "background-image": "url('images/social-icons/circle-filled.svg')",
@@ -185,23 +190,23 @@ function resetInterval(){
     carouselInterval = setInterval(changePhotoIndex, photoDuration);
 }
 
+//image click
 $('#carousel-image').on('click', function(){
     changePhotoIndex();
     resetInterval();
 });
 
+//button click
 $('.carousel-btn').on('click', function(){
     photoIndex = $(this).index();
     changePhoto();
     resetInterval();
 });
 
+//fill first button
 $('.carousel-btn').eq(photoIndex).css({
     "background-image": "url('images/social-icons/circle-filled.svg')",
 });
-
-
-
 
 
 //overlay
@@ -216,9 +221,33 @@ $( window ).scroll(function() {
 });
 
 
-
+//back to top button
 $('#back-to-top').on('click', function(){
     $(window).scrollTop(0);
+});
+
+//Adjust image size
+function imageResize(){
+    var height = "auto";
+    var width = "95%";
+
+    if ($('#carousel-image').height() > $(window).height()){
+        height = "75vh";
+        width = "auto"
+    } 
+    
+    $('#carousel-image').css({
+        "height": height,
+        "width": width
+    });
+}
+
+$( window ).on('load', function() {
+    imageResize();
+});
+
+$( window ).on('resize', function() {
+    imageResize();
 });
 
 /////////////////////////not currently used///////////////////////////////////
