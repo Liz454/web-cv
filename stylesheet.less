@@ -402,6 +402,7 @@ h1{
             height: inherit;
             width: 27%;
             text-align: center;
+            transition-duration: 0.3s;
         }
         &__middle{
             width: 2%;
@@ -437,7 +438,6 @@ h1{
             width: 100vw;
             overflow-y: hidden;
             overflow-x: scroll;
-            // border-top: solid 1px @col3;
             &--inner{
                 height: 500px;
                 .work_card{
@@ -445,13 +445,6 @@ h1{
                     display: inline-block;
                     vertical-align: top;
                     margin: 10px 10px;
-                    // &::before{
-                    //     content: "xxx";
-                    //     border-radius: 25px;
-                    //     background-color: @col2;
-                    //     width: 20px;
-                    //     height: 20px;
-                    // }
                     &__left{
                         width: auto;
                         float: none;
@@ -465,7 +458,7 @@ h1{
                         width: auto;
                         height: auto;
                         float: none;
-                        padding: 10px;
+                        padding: 20px;
                         box-shadow: @shadow;
                         h3{
                             text-align: center;
