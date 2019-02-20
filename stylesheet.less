@@ -394,7 +394,6 @@ h1{
 }
 
 
-
 #work{
     .work_card{
         &__left{
@@ -403,6 +402,10 @@ h1{
             width: 27%;
             text-align: center;
             transition-duration: 0.3s;
+        }
+        .work_scroll_style{
+            font-weight: bold;
+            font-size: 18px;
         }
         &__middle{
             width: 2%;
@@ -450,6 +453,12 @@ h1{
                         float: none;
                         height: auto;
                         margin-bottom: 35px;
+                        transition-duration: 1s;
+                        color: @col3;
+                    }
+                    .work_scroll_style{
+                        font-weight: bold;
+                        color: #000;
                     }
                     &__middle{
                         display: none;

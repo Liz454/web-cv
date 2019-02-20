@@ -373,6 +373,10 @@ h1 {
   text-align: center;
   transition-duration: 0.3s;
 }
+#work .work_card .work_scroll_style {
+  font-weight: bold;
+  font-size: 18px;
+}
 #work .work_card__middle {
   width: 2%;
   height: inherit;
@@ -420,6 +424,12 @@ h1 {
     float: none;
     height: auto;
     margin-bottom: 35px;
+    transition-duration: 1s;
+    color: #464646;
+  }
+  #work .work_card-container--inner .work_card .work_scroll_style {
+    font-weight: bold;
+    color: #000;
   }
   #work .work_card-container--inner .work_card__middle {
     display: none;

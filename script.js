@@ -116,7 +116,6 @@ function workSection() {
 $( window ).scroll(function() {
     if ($(window).width() >= 768){
         var s = $(document).scrollTop();
-        var t = $('#timeline_circle').scrollTop();
         var windowHeight = $( window ).height();
         var halfWindow = windowHeight/3;
 
@@ -134,21 +133,14 @@ $( window ).scroll(function() {
                 "top" : halfWindow
             });
 
-            
             workCards.each(function(){
                 var c = $(this);
                 var cardPos = c.offset().top - s;
-                var newFontWeight = "normal";
-                var newFontSizeLeft = "16px";
+                c.find('.work_card__left').removeClass('work_scroll_style');
 
                 if (halfWindow > cardPos && halfWindow < cardPos + c.height()){
-                    newFontWeight = "bold";
-                    newFontSizeLeft = "18px";
+                    c.find('.work_card__left').addClass('work_scroll_style');
                 }
-                c.find('.work_card__left').css({
-                    "font-weight": newFontWeight,
-                    "font-size": newFontSizeLeft,
-                })
             });
         //below work section
         }else if(s > bottomScrollSection){
@@ -165,25 +157,24 @@ $( window ).scroll(function() {
             });
         }
 
-    // }else{
-    //     var limitLeft = $( window ).width()/4;
-    //     var limitRight = $( window ).width() - limitLeft;
+    }else{
+        var windowHalf = $( window ).width()/2;
+        var w = $('.work_card');
+        var t;
 
-    //     $('.work_card').find('.work_card__left').each(function(){
-    //         var newFontWeight = "normal";
-    //         var newFontSizeLeft = "16px";
-    //         var l = $(this);
-            
-    //         console.log(l.offset().left);
-    //         if (l.offset().left > limitLeft && l.offset().left < limitRight){
-    //             newFontWeight = "bold";
-    //             newFontSizeLeft = "18px";
-    //         }
-    //         l.css({
-    //             "font-weight": newFontWeight,
-    //             "font-size": newFontSizeLeft,
-    //         })
-    //     });
+        $('.work_card-container').scroll(function(){
+            w.each(function(){
+                t = $(this);
+                var hCardWidth = t.width()/2;
+                var itemPos = t.offset().left;
+
+                if (itemPos < windowHalf + 100 - hCardWidth && itemPos > windowHalf - 100 - hCardWidth){
+                    t.find('.work_card__left').addClass('work_scroll_style');
+                }else{
+                    t.find('.work_card__left').removeClass('work_scroll_style');
+                }
+            });
+        });
     }
 });
 
@@ -272,7 +263,7 @@ function imageResize(){
         height = "75vh";
         width = "auto"
     } 
-    
+
     $('#carousel-image').css({
         "height": height,
         "width": width
