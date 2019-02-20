@@ -397,16 +397,11 @@ h1{
 
 #work{
     .work_card{
-        // height: 200px;
-        // @media screen and (max-width: 480px){
-        //     height: 400px;
-        // }
         &__left{
             float: left;
             height: inherit;
             width: 27%;
             text-align: center;
-            // border-right: solid 1px @col3;
         }
         &__middle{
             width: 2%;
@@ -419,12 +414,9 @@ h1{
                 width: 20px;
                 height: 20px;
                 margin-left: -10px;
-                // transition: 3s;
-                // margin-top: 18px;
             }
         }
         &__right{
-            // display: inline;
             float: right;
             height: inherit;
             width: 70%;
@@ -434,26 +426,37 @@ h1{
 // Mobile
 @media screen and (max-width: 767px){
     #work{
+        position: relative;
+        .mobile-line{
+            border-top: solid 1px @col3;
+            width: 100vw; 
+            position: absolute;
+            margin-top: 140px;
+        }
         .work_card-container{
             width: 100vw;
             overflow-y: hidden;
             overflow-x: scroll;
+            // border-top: solid 1px @col3;
             &--inner{
                 height: 500px;
                 .work_card{
                     width: 70vw;
                     display: inline-block;
                     vertical-align: top;
-                    padding: 10px;
                     margin: 10px 10px;
-                    box-shadow: @shadow;
-                    border-radius: 10px;
-                    background-color: #68bdb355;
-                    // color: #fff;
+                    // &::before{
+                    //     content: "xxx";
+                    //     border-radius: 25px;
+                    //     background-color: @col2;
+                    //     width: 20px;
+                    //     height: 20px;
+                    // }
                     &__left{
                         width: auto;
                         float: none;
                         height: auto;
+                        margin-bottom: 35px;
                     }
                     &__middle{
                         display: none;
@@ -462,6 +465,8 @@ h1{
                         width: auto;
                         height: auto;
                         float: none;
+                        padding: 10px;
+                        box-shadow: @shadow;
                         h3{
                             text-align: center;
                         }
@@ -500,15 +505,6 @@ h1{
         padding: 0;
         img{
             width: 95%;
-            // @media (max-width: 767px) {
-            //     width: 95%;
-            // }
-            // @media (max-width: 768px) {
-            //     width: 95%;
-            // }
-            // @media (min-width: 1500px) {
-            //     width: 100%;
-            // }
         }
         .carousel-controls{
             margin: 10px 0;
