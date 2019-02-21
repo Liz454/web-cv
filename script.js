@@ -106,9 +106,30 @@ function workSection() {
         });
         $('.work_card-container--inner').css({
             "width": cumu_width + "px",
-            "height": (maxHeight + 80) + "px",
+            "height": (maxHeight + 100) + "px",
             "padding": "0 " + container_padding + "px"
         });
+
+        var windowHalf = $( window ).width()/2;
+        var w = $('.work_card');
+        var t;
+
+        $('.work_card-container').scroll(function(){
+            w.each(function(){
+                t = $(this);
+                var hCardWidth = t.width()/2;
+                var itemPos = t.offset().left;
+
+                if (itemPos < windowHalf + 100 - hCardWidth && itemPos > windowHalf - 100 - hCardWidth){
+                    t.find('.work_card__left').addClass('work_scroll_style');
+                }else{
+                    t.find('.work_card__left').removeClass('work_scroll_style');
+                }
+            });
+        });
+
+
+
     }
 }
 
@@ -157,27 +178,21 @@ $( window ).scroll(function() {
             });
         }
 
-    }else{
-        var windowHalf = $( window ).width()/2;
-        var w = $('.work_card');
-        var t;
-
-        $('.work_card-container').scroll(function(){
-            w.each(function(){
-                t = $(this);
-                var hCardWidth = t.width()/2;
-                var itemPos = t.offset().left;
-
-                if (itemPos < windowHalf + 100 - hCardWidth && itemPos > windowHalf - 100 - hCardWidth){
-                    t.find('.work_card__left').addClass('work_scroll_style');
-                }else{
-                    t.find('.work_card__left').removeClass('work_scroll_style');
-                }
-            });
-        });
+        
     }
 });
 
+//////////////Portfolio////////////
+$(window).on('load', portfolioResize);
+
+function portfolioResize(){
+    if ($(window).width() < 768){
+        console.log($('.cp_embed_wrapper'));
+        $('.cp_embed_wrapper').each(function(){
+          $(this).attr("clientHeight", "200px");
+        });
+    }
+}
 
 //////////////Photo section////////////
 var photoIndex = 0;

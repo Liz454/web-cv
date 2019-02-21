@@ -26,9 +26,9 @@ h1{
 }
 .section-heading{
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     @media screen and (min-width: 768px){
-        font-size: 26px;
+        font-size: 30px;
     }
 }
 .link{
@@ -37,6 +37,7 @@ h1{
 }
 .container{
     max-width: 1000px;
+    // width: 80%;
     margin: auto;
 }
 .hidden{
@@ -490,10 +491,28 @@ h1{
 
 #portfolio{
     text-align: center;
+    .header-link{
+        margin: 0 10px;
+        .header-link-inner{
+            padding-left: 25px;
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: left 60%;
+            color: #000;
+            text-decoration: none;
+        }
+        .icon-b-github{
+            background-image: url("images/social-icons/github-black.svg")
+        }
+        .icon-b-codepen{
+            background-image: url("images/social-icons/codepen-black.svg")
+        }
+    }
     .portfolio_item{
-        padding: 50px 0;
+        text-align: left;
+        padding: 20px 0;
         .cp_embed_wrapper{
-            margin: 50px 0;
+            margin: 20px 0;
             box-shadow: @shadow;
         }
     }
