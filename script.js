@@ -197,7 +197,7 @@ function portfolioResize(){
 //////////////Photo section////////////
 var photoIndex = 0;
 var photosInAlbum = 8;
-var photoDuration = 5000;
+var photoDuration = 8000;
 var carouselInterval = setInterval(changePhotoIndex, photoDuration);
 
 function changePhotoIndex(){
@@ -212,6 +212,7 @@ function changePhotoIndex(){
 function changePhoto(){
     //change image
     $('#carousel-image').attr("src", "images/carousel-images/" + photoIndex + ".JPG");
+    imageResize();
 
     //change blurb
     $('.carousel-p').addClass('hidden');
@@ -271,10 +272,11 @@ $('#back-to-top').on('click', function(){
 
 //Adjust image size
 function imageResize(){
+    console.log('image resize function called');
     var height = "auto";
     var width = "95%";
 
-    if ($('#carousel-image').height() > $(window).height()){
+    if ($('#carousel-image').height() > $(window).height() || $('#carousel-image').height() == $(window).height()*0.75){
         height = "75vh";
         width = "auto"
     } 

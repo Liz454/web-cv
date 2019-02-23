@@ -67,6 +67,40 @@ h1{
     }
 }
 
+//icons
+
+.icon-link{
+    padding-left: 25px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: left 60%;
+    text-decoration: none;
+}
+.icon-linkedin-w{
+    background-image: url("images/social-icons/linkedin-white.svg")
+}
+.icon-github-w{
+    background-image: url("images/social-icons/github-white.svg")
+}
+.icon-codepen-w{
+    background-image: url("images/social-icons/codepen-white.svg")
+}
+.icon-map-w{
+    background-image: url("images/social-icons/map.svg")
+}
+.icon-phone-w{
+    background-image: url("images/social-icons/mobile.svg")
+}
+.icon-email-w{
+    background-image: url("images/social-icons/envelope.svg")
+}
+.icon-b-github{
+    background-image: url("images/social-icons/github-black.svg")
+}
+.icon-b-codepen{
+    background-image: url("images/social-icons/codepen-black.svg")
+}
+
 
 
 #nav{
@@ -120,7 +154,6 @@ h1{
 }
 
 
-
 #header{
     text-align: center;
     background-image: url("images/background-image-2.jpg");
@@ -142,30 +175,13 @@ h1{
             .header-link{
                 padding: 0 10px;
             }
-            .header-link-inner{
+            .icon-link{
                 padding-left: 25px;
                 background-size: 20px;
                 background-repeat: no-repeat;
                 background-position: left 60%;
             }
-            .header-linkedin{
-                background-image: url("images/social-icons/linkedin-white.svg")
-            }
-            .header-github{
-                background-image: url("images/social-icons/github-white.svg")
-            }
-            .header-codepen{
-                background-image: url("images/social-icons/codepen-white.svg")
-            }
-            .header-map{
-                background-image: url("images/social-icons/map.svg")
-            }
-            .header-phone{
-                background-image: url("images/social-icons/mobile.svg")
-            }
-            .header-email{
-                background-image: url("images/social-icons/envelope.svg")
-            }
+            
         }
     }
     .btn-arrow{
@@ -489,24 +505,26 @@ h1{
 }
 
 
+
+
 #portfolio{
     text-align: center;
     .header-link{
         margin: 0 10px;
-        .header-link-inner{
-            padding-left: 25px;
-            background-size: 20px;
-            background-repeat: no-repeat;
-            background-position: left 60%;
-            color: #000;
-            text-decoration: none;
-        }
-        .icon-b-github{
-            background-image: url("images/social-icons/github-black.svg")
-        }
-        .icon-b-codepen{
-            background-image: url("images/social-icons/codepen-black.svg")
-        }
+    //     .icon-link{
+    //         padding-left: 25px;
+    //         background-size: 20px;
+    //         background-repeat: no-repeat;
+    //         background-position: left 60%;
+    //         color: #000;
+    //         text-decoration: none;
+    //     }
+    //     .icon-b-github{
+    //         background-image: url("images/social-icons/github-black.svg")
+    //     }
+    //     .icon-b-codepen{
+    //         background-image: url("images/social-icons/codepen-black.svg")
+    //     }
     }
     .portfolio_item{
         text-align: left;
@@ -548,21 +566,44 @@ h1{
                 transition: 1s;
             }
         }
-        #back-to-top{
-            font-family: @bodyfont;
-            color: #fff;
-            margin-top: 30vh;
-            transition: 0.5s;
-            font-size: 20px;
-            &:hover{
-                font-size: 25px;
-            } 
-        }
     }
-    .over-overlay{
-        z-index: 2;
+    
+}
+.over-overlay{
+    z-index: 2;
+    position: relative;
+}
+
+#contact{
+    color: #fff;
+    position: relative;
+    max-width: 245px;
+    margin: auto;
+    a{
+        color: #fff;
     }
 }
+
+#back-to-top{
+    width: 200px;
+    margin: 20vh auto;
+    button{
+        font-size: 20px;
+        font-family: @bodyfont;
+        text-align: center;
+        width: 100%;
+        color: #fff;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        transition: 0.5s;
+        &:hover{
+            font-size: 25px;
+        } 
+    }
+    
+}
+
 .photography-overlay{
     z-index: 1;
     height: 100%;

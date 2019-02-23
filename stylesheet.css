@@ -56,6 +56,37 @@ h1 {
     padding: 0;
   }
 }
+.icon-link {
+  padding-left: 25px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: left 60%;
+  text-decoration: none;
+}
+.icon-linkedin-w {
+  background-image: url("images/social-icons/linkedin-white.svg");
+}
+.icon-github-w {
+  background-image: url("images/social-icons/github-white.svg");
+}
+.icon-codepen-w {
+  background-image: url("images/social-icons/codepen-white.svg");
+}
+.icon-map-w {
+  background-image: url("images/social-icons/map.svg");
+}
+.icon-phone-w {
+  background-image: url("images/social-icons/mobile.svg");
+}
+.icon-email-w {
+  background-image: url("images/social-icons/envelope.svg");
+}
+.icon-b-github {
+  background-image: url("images/social-icons/github-black.svg");
+}
+.icon-b-codepen {
+  background-image: url("images/social-icons/codepen-black.svg");
+}
 #nav {
   font-size: 20px;
   padding: 10px 0;
@@ -137,29 +168,11 @@ h1 {
 #header .header-content p .header-link {
   padding: 0 10px;
 }
-#header .header-content p .header-link-inner {
+#header .header-content p .icon-link {
   padding-left: 25px;
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: left 60%;
-}
-#header .header-content p .header-linkedin {
-  background-image: url("images/social-icons/linkedin-white.svg");
-}
-#header .header-content p .header-github {
-  background-image: url("images/social-icons/github-white.svg");
-}
-#header .header-content p .header-codepen {
-  background-image: url("images/social-icons/codepen-white.svg");
-}
-#header .header-content p .header-map {
-  background-image: url("images/social-icons/map.svg");
-}
-#header .header-content p .header-phone {
-  background-image: url("images/social-icons/mobile.svg");
-}
-#header .header-content p .header-email {
-  background-image: url("images/social-icons/envelope.svg");
 }
 #header .btn-arrow {
   margin: 50px 0;
@@ -374,20 +387,6 @@ h1 {
 #portfolio .header-link {
   margin: 0 10px;
 }
-#portfolio .header-link .header-link-inner {
-  padding-left: 25px;
-  background-size: 20px;
-  background-repeat: no-repeat;
-  background-position: left 60%;
-  color: #000;
-  text-decoration: none;
-}
-#portfolio .header-link .icon-b-github {
-  background-image: url("images/social-icons/github-black.svg");
-}
-#portfolio .header-link .icon-b-codepen {
-  background-image: url("images/social-icons/codepen-black.svg");
-}
 #portfolio .portfolio_item {
   text-align: left;
   padding: 20px 0;
@@ -427,18 +426,36 @@ h1 {
   background-repeat: no-repeat;
   transition: 1s;
 }
-#photography .carousel-content #back-to-top {
-  font-family: 'Quicksand', sans-serif;
-  color: #fff;
-  margin-top: 30vh;
-  transition: 0.5s;
-  font-size: 20px;
-}
-#photography .carousel-content #back-to-top:hover {
-  font-size: 25px;
-}
-#photography .over-overlay {
+.over-overlay {
   z-index: 2;
+  position: relative;
+}
+#contact {
+  color: #fff;
+  position: relative;
+  max-width: 245px;
+  margin: auto;
+}
+#contact a {
+  color: #fff;
+}
+#back-to-top {
+  width: 200px;
+  margin: 20vh auto;
+}
+#back-to-top button {
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  transition: 0.5s;
+}
+#back-to-top button:hover {
+  font-size: 25px;
 }
 .photography-overlay {
   z-index: 1;
