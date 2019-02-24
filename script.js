@@ -9,6 +9,24 @@ $( window ).scroll(function() {
     }
 });
 
+//////////////About section////////////
+$(window).on('load', resizeAbout);
+$(window).on('resize', resizeAbout);
+
+
+
+function resizeAbout(){
+    if ($(window).width() >= 768){
+        $(".about__right").css({
+            "height": $(".about__left").height()
+        });
+    } else {
+        $(".about__right").css({
+            "height": "auto"
+        });
+    }
+}
+
 
 //////////////Skills section////////////
 
@@ -23,9 +41,9 @@ $( window ).on("load", function() {
 });
 
 //Accordion
-$('.skills_container__outer').on('click', function(){
-    $(this).find('.skills__inner__hidden').slideToggle();
-});
+// $('.skills_container__outer').on('click', function(){
+//     $(this).find('.skills__inner__hidden').slideToggle();
+// });
 
 
 //////////////Work section////////////

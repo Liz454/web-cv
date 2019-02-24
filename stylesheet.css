@@ -295,14 +295,6 @@ h1 {
   width: 10%;
   background-image: linear-gradient(to right, #93ecae, #f9f96f);
 }
-@media screen and (max-width: 767px) {
-  .skills_container__outer {
-    cursor: pointer;
-  }
-  .skills_container__outer .skills__inner__hidden {
-    display: none;
-  }
-}
 #work .work_card__left {
   float: left;
   height: inherit;
@@ -386,6 +378,9 @@ h1 {
 }
 #portfolio .header-link {
   margin: 0 10px;
+}
+#portfolio .header-link a {
+  color: #000;
 }
 #portfolio .portfolio_item {
   text-align: left;
