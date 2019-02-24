@@ -205,7 +205,6 @@ $(window).on('load', portfolioResize);
 
 function portfolioResize(){
     if ($(window).width() < 768){
-        console.log($('.cp_embed_wrapper'));
         $('.cp_embed_wrapper').each(function(){
           $(this).attr("clientHeight", "200px");
         });
@@ -290,7 +289,6 @@ $('#back-to-top').on('click', function(){
 
 //Adjust image size
 function imageResize(){
-    console.log('image resize function called');
     var height = "auto";
     var width = "95%";
 

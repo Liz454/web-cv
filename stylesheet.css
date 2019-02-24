@@ -338,6 +338,7 @@ h1 {
     width: 100vw;
     overflow-y: hidden;
     overflow-x: scroll;
+    scroll-behavior: smooth;
   }
   #work .work_card-container--inner {
     height: 500px;
