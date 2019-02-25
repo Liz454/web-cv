@@ -120,10 +120,10 @@ h1 {
   }
 }
 #nav .link-container .link:hover {
-  color: #949494;
+  color: #8eabb4;
 }
 .navbar-scrolled {
-  background-color: #dadada;
+  background-color: #c4ecf8;
 }
 @media screen and (max-width: 450px) {
   #nav {
@@ -226,40 +226,6 @@ h1 {
     margin-left: 0;
   }
 }
-#about .other {
-  border-radius: 5px;
-  border: 1px solid #949494;
-}
-#about .other__container {
-  cursor: pointer;
-  text-align: justify;
-}
-#about .other__container .other__btn {
-  display: inline-block;
-  background-color: #949494;
-  padding: 10px 0;
-  text-align: center;
-  width: 33.33%;
-  transition: 0.5s;
-}
-@media screen and (max-width: 767px) {
-  #about .other__container .other__btn {
-    font-size: 14px;
-  }
-}
-#about .other__container .other__btn:hover {
-  background-color: #f5f5f5;
-}
-#about .other__container .other__btn--active {
-  background-color: #fff;
-  color: #000;
-}
-#about .other__container .other__btn--active:hover {
-  background-color: #fff;
-}
-#about .other .other-content {
-  padding: 10px 20px;
-}
 #skills .skills_container__outer {
   padding: 0 0 20px;
 }
@@ -293,7 +259,7 @@ h1 {
 }
 #skills .skills_container__outer .skill_item .skill_graphic_container .skill_graphic__b .skill_graphic__c {
   width: 10%;
-  background-image: linear-gradient(to right, #93ecae, #f9f96f);
+  background-image: linear-gradient(to right, #c4ecf8, #c7ffbb);
 }
 #work .work_card__left {
   float: left;
@@ -310,11 +276,11 @@ h1 {
   width: 2%;
   height: inherit;
   float: left;
-  border-left: solid 1px #464646;
+  border-left: solid 1px #8eabb4;
 }
 #work .work_card__middle #timeline_circle {
   border-radius: 25px;
-  background-color: #949494;
+  background-color: #c4ecf8;
   width: 20px;
   height: 20px;
   margin-left: -10px;
@@ -329,7 +295,7 @@ h1 {
     position: relative;
   }
   #work .mobile-line {
-    border-top: solid 1px #464646;
+    border-top: solid 1px #8eabb4;
     width: 100vw;
     position: absolute;
     margin-top: 140px;
@@ -354,7 +320,7 @@ h1 {
     float: none;
     height: auto;
     margin-bottom: 35px;
-    color: #464646;
+    color: #8eabb4;
   }
   #work .work_card-container--inner .work_card .work_scroll_style {
     font-weight: bold;
