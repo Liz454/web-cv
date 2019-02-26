@@ -1,4 +1,18 @@
+///Call resize functions
+$(window).on('load', function(){
+    resizeAbout();
+    setSkillValues();
+    workSection();
+    portfolioResize();
+    imageResize();
+});
 
+$(window).on('resize', function(){
+    resizeAbout();
+    workSection();
+    portfolioResize();
+    imageResize();
+});
 
 //Scroll nav
 $( window ).scroll(function() {
@@ -10,10 +24,6 @@ $( window ).scroll(function() {
 });
 
 //////////////About section////////////
-$(window).on('load', resizeAbout);
-$(window).on('resize', resizeAbout);
-
-
 
 function resizeAbout(){
     if ($(window).width() >= 768){
@@ -31,14 +41,14 @@ function resizeAbout(){
 //////////////Skills section////////////
 
 //Set skill values
-$( window ).on("load", function() {
+function setSkillValues(){
     var skills = $(".skill_item");
     var skillNum = skills.length;
     var graphics = $('.skill_graphic__c');
     for (i=0; i<skillNum; i++){
         graphics[i].setAttribute("style", "width: " + skills[i].dataset.skillLevel + "%");
     }
-});
+}
 
 //Accordion
 // $('.skills_container__outer').on('click', function(){
@@ -47,10 +57,6 @@ $( window ).on("load", function() {
 
 
 //////////////Work section////////////
-
-//line height and card height
-$(document).ready(workSection);
-$(window).resize(workSection);
 
 function workSection() {
 
@@ -201,7 +207,6 @@ $( window ).scroll(function() {
 });
 
 //////////////Portfolio////////////
-$(window).on('load', portfolioResize);
 
 function portfolioResize(){
     if ($(window).width() < 768){
@@ -212,6 +217,7 @@ function portfolioResize(){
 }
 
 //////////////Photo section////////////
+
 var photoIndex = 0;
 var photosInAlbum = 8;
 var photoDuration = 8000;
@@ -303,13 +309,19 @@ function imageResize(){
     });
 }
 
-$( window ).on('load', function() {
-    imageResize();
-});
 
-$( window ).on('resize', function() {
-    imageResize();
-});
+
+
+
+
+
+
+
+
+
+
+
+
 
 /////////////////////////not currently used///////////////////////////////////
 
