@@ -234,7 +234,10 @@ function changePhotoIndex(){
 
 function changePhoto(){
     //change image
-    $('#carousel-image').attr("src", "images/carousel-images/" + photoIndex + ".JPG");
+    $('.carousel-image').each(function(){
+        $(this).addClass('hidden');
+    });
+    $('.carousel-image').eq(photoIndex).removeClass('hidden');
     imageResize();
 
     //change blurb
@@ -258,7 +261,7 @@ function resetInterval(){
 }
 
 //image click
-$('#carousel-image').on('click', function(){
+$('.carousel-image').on('click', function(){
     changePhotoIndex();
     resetInterval();
 });
@@ -298,12 +301,12 @@ function imageResize(){
     var height = "auto";
     var width = "95%";
 
-    if ($('#carousel-image').height() > $(window).height() || $('#carousel-image').height() == $(window).height()*0.75){
+    if ($('.carousel-image').height() > $(window).height() || $('.carousel-image').height() == $(window).height()*0.75){
         height = "75vh";
         width = "auto"
     } 
 
-    $('#carousel-image').css({
+    $('.carousel-image').css({
         "height": height,
         "width": width
     });
