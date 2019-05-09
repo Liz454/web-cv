@@ -1,5 +1,19 @@
-.image_outer-container {
+body {
+  margin: 0;
+}
+#header {
   width: 100%;
-  height: 80%;
-  background-color: #afa6e2;
+  height: 5%;
+  min-height: 30px;
+  background-color: #c7f2ff;
+}
+#images {
+  width: 100%;
+  height: 90%;
+}
+#scroll-bar {
+  width: 100%;
+  height: 5%;
+  min-height: 30px;
+  background-color: #ffd5f2;
 }
