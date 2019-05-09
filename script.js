@@ -300,13 +300,14 @@ $('#back-to-top').on('click', function(){
 function imageResize(){
     var height = "auto";
     var width = "95%";
+    var currentImg = $('.carousel-image').eq(photoIndex);
 
-    if ($('.carousel-image').height() > $(window).height() || $('.carousel-image').height() == $(window).height()*0.75){
+    if (currentImg.height() > $(window).height()){
         height = "75vh";
         width = "auto"
     } 
 
-    $('.carousel-image').css({
+    currentImg.css({
         "height": height,
         "width": width
     });
